@@ -455,7 +455,7 @@
             >
                 <div class="custom-comment-control-title">Добавить комментарий</div>
 
-                {{html-class (if this.composer.isPreviewVisible "composer-has-preview")}}
+                {{html-class "composer-has-preview"}}
                 <ComposerMessages
                         @composer={{this.composer.model}}
                         @messageCount={{this.composer.messageCount}}
@@ -584,7 +584,7 @@
 
                                         <div
                                                 class="title-and-category
-                    {{if this.composer.isPreviewVisible 'with-preview'}}"
+                    {{ 'with-preview'}}"
                                         >
                                             <ComposerTitle
                                                     @composer={{this.composer.model}}
@@ -652,7 +652,7 @@
                         @connectorTagName="div"
                         @outletArgs={{hash
                         model=this.composer.model
-                        showPreview=this.composer.isPreviewVisible
+                        showPreview=true
                 }}
                 />
               </span>
@@ -754,7 +754,6 @@
                                     </a>
                                 {{/if}}
 
-                                {{#if this.composer.isPreviewVisible}}
                                     <DButton
                                             @action={{this.composer.togglePreview}}
                                             @title="composer.hide_preview"
@@ -762,7 +761,6 @@
                                             @icon="pencil"
                                             class="hide-preview"
                                     />
-                                {{/if}}
                             {{/if}}
 
                             {{#if
