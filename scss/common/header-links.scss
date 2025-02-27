@@ -1,0 +1,239 @@
+@font-face {
+  font-family: "XXII Centar Regular";
+  src: url($XXIICentarRegular) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.before-header-panel-outlet {
+  display: flex;
+}
+
+@if $links_position == "right" {
+  .before-header-panel-outlet {
+    margin-left: auto;
+    + .panel {
+      margin-left: 0;
+    }
+  }
+}
+
+.custom-header-links {
+  display: inline-flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 20px;
+  @if $links_position == "left" {
+    margin-left: 1em;
+    &--hide-links {
+      display: none;
+    }
+  }
+
+  .game-custom-header-links,
+  .cbt-custom-header-links,
+  .signup-custom-header-links,
+  .checking-custom-header-links {
+    display: flex;
+    height: 42px;
+    background-image: url($mainBtnBg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+      background-image: url($mainBtnBgHover);
+      &::after {
+        background-image: url($mainBtnVectorLeftHover);
+      }
+      &::before {
+        background-image: url($mainBtnVectorRightHover);
+      }
+    }
+    &::after {
+      content: " ";
+      position: absolute;
+      left: 18px;
+      top: 1px;
+      width: 100%;
+      height: 100%;
+      background-image: url($mainBtnVectorLeft);
+      background-position: left;
+      background-repeat: no-repeat;
+    }
+    &::before {
+      content: " ";
+      position: absolute;
+      left: -18px;
+      top: 1px;
+      width: 100%;
+      height: 100%;
+      background-image: url($mainBtnVectorRight);
+      background-position: right;
+      background-repeat: no-repeat;
+    }
+
+    a {
+      color: black;
+      font-size: 18px !important;
+      margin-top: 3px;
+      z-index: 999;
+      &:active {
+        color: #f9df94 !important;
+      }
+    }
+  }
+
+  .cbt-custom-header-links {
+    width: 192px;
+    background-image: url($mainBtnCbt);
+    &:hover {
+      width: 186px;
+      margin-right: 3px;
+      background-image: url($mainBtnCbtHover);
+      height: 40px;
+      &::after {
+        left: 9px;
+      }
+      &::before {
+        left: -9px;
+      }
+    }
+    &::after {
+      left: 11px;
+      background-size: 13%;
+    }
+    &::before {
+      left: -11px;
+      background-size: 13%;
+    }
+  }
+  .checking-custom-header-links {
+    width: 214px;
+    background-image: url($mainBtnChecking);
+    &:active {
+      background-image: url($mainBtnCheckingActive);
+    }
+    &:hover {
+      width: 206px;
+      background-image: url($mainBtnCheckingHover);
+      margin-right: 4px;
+      height: 40px;
+      &::after {
+        left: 6px;
+      }
+      &::before {
+        left: -6px;
+      }
+    }
+
+    &::after {
+      left: 10px;
+      background-size: 11%;
+    }
+    &::before {
+      left: -10px;
+      background-size: 11%;
+    }
+  }
+  .game-custom-header-links {
+    width: 140px;
+    &:hover {
+      width: 132px;
+      margin-right: 4px;
+      &::after {
+        left: 7px;
+      }
+      &::before {
+        left: -7px;
+      }
+    }
+    &::after {
+      left: 10px;
+      background-size: 16%;
+    }
+    &::before {
+      left: -10px;
+      background-size: 16%;
+    }
+  }
+  .signup-custom-header-links {
+    background-image: url($mainBtnChecking);
+    width: 210px;
+    &::after {
+      left: 11px;
+      background-size: 11%;
+    }
+    &::before {
+      left: -11px;
+      background-size: 11%;
+    }
+    &:hover {
+      width: 204px;
+      background-image: url($mainBtnCheckingHover);
+      margin-right: 3px;
+      height: 40px;
+      &::after {
+        left: 8px;
+      }
+      &::before {
+        left: -8px;
+      }
+    }
+  }
+
+  .website-custom-header-links {
+    margin-right: 16px;
+    a {
+      font-family: "XXII Centar Regular";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 23px !important;
+      line-height: 20px;
+      color: #c5ae70 !important;
+      padding: none !important;
+    }
+  }
+
+  .headerLink {
+    list-style: none;
+    a {
+      font-size: var(--font-up-1);
+    }
+  }
+
+  &--hide-links {
+    .headerLink:not(.headerLink--keep) {
+      display: none;
+    }
+  }
+}
+
+.desktop-view .headerLink--vmo,
+.mobile-view .headerLink--vdo {
+  display: none;
+}
+
+// for compatibility with the discourse-header-search component
+
+.floating-search-input-wrapper {
+  flex: 1 1 auto;
+  margin: 0 1em;
+  @if $links_position == "left" {
+    order: 2;
+  }
+
+  .floating-search-input {
+    width: 100%;
+    margin: 0;
+  }
+
+  .search-menu {
+    width: 100% !important; // overrides very specific selector
+  }
+}

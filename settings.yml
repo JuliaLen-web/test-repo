@@ -1,0 +1,110 @@
+category_groups:
+  type: "list"
+  default: "Основное: news, informacziya-o-forume|Broken Sun ЗБТ: cbt, wiki, tehnicheskaya-podderzhka-zbt, testers|Общение: discuss, clans, community, ideas, support, english|Административный раздел: moderators, admins"
+extra_links:
+  default: >
+    []
+  json_schema: >-
+    {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "ID",
+            "description": "A unique identifier for the link"
+          },
+          "url": {
+            "type": "string",
+            "title": "URL",
+            "description": "The URL for the link"
+          },
+          "color": {
+            "type": "string",
+            "title": "Color",
+            "description": "The color associated with the link",
+            "format": "color"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title",
+            "description": "The title of the link"
+          },
+          "description": {
+            "type": "string",
+            "format": "markdown",
+            "title": "Description",
+            "description": "A short description of the link"
+          },
+          "icon": {
+            "type": "string",
+            "title": "Icon",
+            "description": "An icon for the link. Example: heart",
+            "default": ""
+          }
+        },
+        "required": ["id", "url", "title", "color"]
+      }
+    }
+
+show_on_mobile:
+  default: true
+
+show_ungrouped:
+  default: true
+
+hide_muted_subcategories:
+  default: false
+
+custom_header_links:
+  type: objects
+  default: []
+  schema:
+    name: "link"
+    identifier: text
+    properties:
+      text:
+        type: string
+        required: true
+        validations:
+          min_length: 1
+          max_length: 100
+      title:
+        type: string
+        validations:
+          min_length: 1
+          max_length: 1000
+      url:
+        type: string
+        required: true
+        validations:
+          min_length: 1
+          max_length: 2048
+          url: true
+      view:
+        type: enum
+        choices:
+          - vdm
+          - vdo
+          - vmo
+      target:
+        type: enum
+        choices:
+          - blank
+          - self
+      hide_on_scroll:
+        type: enum
+        choices:
+          - remove
+          - keep
+        default: keep
+      locale:
+        type: string
+
+links_position:
+  default: right
+  type: enum
+  choices:
+    - right
+    - left

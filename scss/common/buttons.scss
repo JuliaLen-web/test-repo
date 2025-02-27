@@ -1,0 +1,233 @@
+.login-button,
+.sign-up-button {
+  color: white !important;
+}
+
+.d-header-icons {
+  li {
+    &.chat-header-icon {
+      position: relative;
+      &::before {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-position: center;
+        background-size: 60%;
+        background-repeat: no-repeat;
+        filter: blur(3px);
+      }
+      &:hover {
+        background-color: transparent !important;
+        &::before {
+          content: " ";
+          background-image: url($chatHover);
+        }
+      }
+      &:active {
+        &::before {
+          content: " ";
+          background-image: url($chatActive);
+        }
+      }
+    }
+  }
+  #search-button {
+    position: relative;
+    &::before {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-position: center;
+      background-size: 60%;
+      background-repeat: no-repeat;
+      filter: blur(3px);
+    }
+    &:hover {
+      &::before {
+        content: " ";
+        background-image: url($searchHover);
+      }
+    }
+    &:active {
+      &::before {
+        content: " ";
+        background-image: url($searchActive);
+      }
+    }
+  }
+}
+
+.header-sidebar-toggle button {
+  position: relative;
+  &::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-position: center;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    filter: blur(3px);
+  }
+  &:hover {
+    &::before {
+      content: " ";
+      background-image: url($barsHover);
+    }
+  }
+  &:active {
+    &::before {
+      content: " ";
+      background-image: url($barsActive);
+    }
+  }
+}
+
+.btn:not(
+    .sidebar-section-header,
+    .btn-sidebar-toggle,
+    #search-button,
+    .show-advanced-search,
+    .search-icon,
+    .bold,
+    .italic
+  ),
+.user-menu.revamped .tabs-list .btn,
+.notifications-button {
+  &.active {
+    background-color: #171e2c;
+    color: white !important;
+    border: 1px solid #f9df94;
+  }
+  .d-button-label {
+    color: white;
+  }
+  &#create-topic .d-button-label {
+    color: #d7c27d;
+  }
+  &:hover {
+    background-color: #273653;
+    border: 1px solid #f9df94;
+    svg {
+      &.d-icon {
+        color: #f9df94 !important;
+      }
+    }
+    .d-button-label {
+      color: #f9df94 !important;
+    }
+  }
+  &:active {
+    background-color: #f9df94;
+    background-image: none;
+    svg {
+      &.d-icon {
+        color: #1e2533 !important;
+      }
+    }
+    .d-button-label {
+      color: #1e2533 !important;
+    }
+  }
+  svg {
+    &.d-icon {
+      color: #f9df94;
+      &.d-icon-search {
+        color: var(--d-icon-placeholder);
+      }
+      &.d-icon-plus {
+        color: var(--d-icon-active);
+      }
+    }
+  }
+}
+.c-navbar__actions .btn,
+.c-navbar__back-button {
+  &:hover {
+    outline: 1px solid #f9df94;
+    outline-offset: -1px;
+    border: none !important;
+  }
+}
+
+.btn.btn-text.bold,
+.btn.btn-text.italic {
+  span {
+    color: #f9df94 !important;
+  }
+  &:hover {
+    background-color: #273653;
+    border: 1px solid #f9df94;
+    svg,
+    span {
+      &.d-icon {
+        color: #f9df94 !important;
+      }
+    }
+    .d-button-label {
+      color: #f9df94 !important;
+    }
+  }
+  &:active {
+    background-color: #f9df94;
+    background-image: none;
+    svg {
+      &.d-icon {
+        color: #1e2533 !important;
+      }
+    }
+    .d-button-label {
+      color: #1e2533 !important;
+    }
+  }
+}
+
+.discourse-no-touch .d-header-icons .icon,
+.discourse-no-touch .header-sidebar-toggle button {
+  &:hover,
+  &:active {
+    background-color: transparent !important;
+    background-image: none !important;
+    border-color: transparent !important;
+  }
+
+  svg {
+    &:hover {
+      color: #f9df94 !important;
+    }
+    &:active {
+      color: #fff5d9 !important;
+    }
+  }
+}
+
+a,
+.more-topics__browse-more a,
+.more-topics__browse-more a:visited,
+.empty-state-body p a,
+.empty-state-body p a:visited {
+  color: #f9df94;
+}
+
+.regular.contents {
+  * > a:visited {
+    color: #f9df94;
+  }
+}
+
+.sidebar-section-link-wrapper
+  .sidebar-section-link
+  .sidebar-section-link-suffix.icon.unread
+  svg {
+  color: rgba(28, 169, 201, 1);
+}
+
+.badge-notification.unread-posts,
+.badge-notification.new-topic::before {
+  background-color: rgba(28, 169, 201, 1) !important;
+}

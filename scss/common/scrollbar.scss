@@ -1,0 +1,41 @@
+.timeline-scrollarea-wrapper {
+  .timeline-date-wrapper .start-date::after,
+  .timeline-date-wrapper .now-date::before {
+    content: " ";
+    background-image: url($scrollbarArrow);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    display: block;
+    position: relative;
+    left: -3.7px;
+  }
+  .timeline-date-wrapper .now-date::before {
+    transform: rotate(180deg);
+  }
+
+  .timeline-scrollarea {
+    border-left: none !important;
+    &::before {
+      content: " ";
+      position: absolute;
+      width: 8px;
+      height: calc(100% + 8px);
+      top: -6px;
+      left: -4px;
+      background-image: url($scrollbarThumb);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: top center;
+      display: block;
+    }
+
+    .timeline-scroller {
+      .timeline-handle {
+        background-color: #b19f63 !important;
+      }
+    }
+  }
+}

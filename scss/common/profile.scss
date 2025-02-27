@@ -1,0 +1,44 @@
+.user-main .about .details,
+.archetype-private_message .topic-map section {
+  background: none !important;
+}
+
+.user-stream .item,
+.user-stream .user-stream-item {
+  background: transparent !important;
+  border-bottom: none !important;
+}
+
+.user-stream .stream-topic-title {
+  .title {
+    a,
+    a:visited {
+      color: var(--primary-high);
+    }
+  }
+}
+
+.archetype-private_message .regular.contents {
+  border: none;
+}
+
+.user-content {
+  background: none;
+}
+
+.user-menu .quick-access-panel .read {
+  > * {
+    color: white;
+  }
+}
+[data-content][data-identifier="user-tip"] .btn-primary {
+  color: var(--d-icon-active) !important;
+}
+
+[data-content][data-identifier="user-tip"] {
+  background-color: rgba(11, 19, 33, 1);
+  color: #f2f2f2;
+}
+.fk-d-tooltip__content .arrow {
+  color: rgba(11, 19, 33, 1);
+}

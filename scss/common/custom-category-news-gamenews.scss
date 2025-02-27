@@ -1,0 +1,125 @@
+.category.archetype-regular,
+_portal {
+  background: url($bgPattern) top/600px repeat, #1A2233;
+
+  #main-outlet-wrapper {
+    backdrop-filter: none;
+    padding-inline: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url($orbitalsBg) center 60px/contain no-repeat;
+    position: relative;
+    z-index: 1;
+
+    &:after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      max-height: 100vh;
+      height: 100%;
+      width: 100%;
+      opacity: 0.5;
+      background: radial-gradient(33.38% 49.95% at 50% 50.05%, #1F314C 0%, rgba(0, 0, 0, 0) 95.28%);
+    }
+
+    #topic-footer-buttons,
+    .sidebar-wrapper {
+      display: none;
+    }
+
+    #main-outlet {
+      width: 100%;
+      max-width: 960px;
+
+      .lightbox-wrapper *,
+      .lightbox-wrapper {
+        width: 100%;
+      }
+    }
+
+    .container.posts {
+      display: flex;
+      justify-content: center;
+    }
+
+    .container.posts>.row {
+      min-width: 100%;
+    }
+
+    .topic-body .cooked {
+      padding: 0;
+    }
+
+    .topic-owner {
+      .topic-avatar {
+        display: none;
+      }
+
+      .topic-body {
+        border: none;
+      }
+
+      .topic-body .contents {
+        p {
+          max-width: 720px;
+          margin-inline: auto;
+        }
+      }
+
+      .topic-meta-data {
+        padding: 0;
+        margin-bottom: 30px;
+
+        .names {
+          display: none;
+        }
+
+        .post-infos {
+          color: #E6E6E6;
+          font-family: "XXII Centar Regular";
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 18px; /* 150% */
+        }
+      }
+    }
+
+    .topic-body {
+      width: 100%;
+
+      .contents {
+        img, video {
+          object-fit: cover;
+        }
+
+        p {
+          color: #FFF;
+          font-family: "XXII Centar Regular";
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 133.333%;
+          letter-spacing: 0.72px;
+        }
+      }
+    }
+
+    #topic-title .fancy-title {
+      color: #F9DF94;
+      text-align: center;
+      font-family: "Albertusnova Thin";
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 112%;
+      letter-spacing: 0.75px;
+      text-transform: uppercase;
+    }
+
+    .topic-map {
+      display: none !important;
+    }
+  }
+}

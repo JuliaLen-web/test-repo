@@ -1,0 +1,126 @@
+.custom-category-group {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 2em;
+
+  @media screen and (max-width: 800px) {
+    // mobilish
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+  }
+
+  li.category-box {
+    width: unset;
+    margin: 0;
+  }
+
+  .category-details {
+    display: flex;
+    flex-direction: column;
+
+    .subcategories {
+      gap: 0 0.5em;
+      margin-top: auto;
+    }
+  }
+
+  .subcategories .subcategory .subcategory-image-placeholder {
+    margin: 0;
+  }
+
+  // Extra link styling
+  .extra-link.category-box {
+    .parent-box-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      color: var(--primary);
+      margin-top: 0.25em;
+      margin-bottom: 0.5em;
+
+      .title {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.custom-category-group-toggle {
+  display: flex;
+  align-items: center;
+  padding-top: 0.5em;
+
+  h2 {
+    margin-top: 0 !important; // too specific in core due to ID
+    color: var(--primary);
+    font-size: var(--font-up-3);
+  }
+
+  .d-icon {
+    font-size: var(--font-up-2);
+    top: -0.15em; // alignment
+    margin-left: 0.33em;
+    color: var(--primary-medium);
+  }
+
+  &:hover {
+    .d-icon {
+      color: var(--primary);
+    }
+  }
+}
+
+[class^="custom-category-group-"] {
+  ul {
+    transition: opacity 1s, height 0;
+    opacity: 0;
+    height: 0;
+    margin-bottom: 0;
+    padding-top: 0.25em;
+    overflow: hidden;
+  }
+
+  .d-icon {
+    transition: all 0.25s;
+  }
+
+  &.is-expanded {
+    ul {
+      transition: opacity 1s, height 0s;
+      height: unset;
+      opacity: 1;
+      margin-bottom: 1.5em;
+      overflow: visible;
+    }
+    .custom-category-group-toggle .d-icon {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.navigation-categories .contents,
+.above-discovery-categories-outlet.custom-categories-boxes {
+  .category-boxes-with-topics,
+  .category-boxes {
+    // hides the default categories layout on desktop, so the custom layout appears
+    display: none;
+  }
+
+  .custom-categories-boxes {
+    .category-boxes-with-topics,
+    .category-boxes {
+      display: grid;
+    }
+  }
+}
+
+@if $show_on_mobile == "true" {
+  // hides the default categories layout on mobile, so the custom layout appears
+  .mobile-view {
+    .category-list.with-topics {
+      display: none;
+    }
+  }
+}

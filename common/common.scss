@@ -1,0 +1,115 @@
+/* ===========================
+   Global Styles
+=========================== */
+
+@font-face {
+  font-family: "XXII Centar Regular";
+  src: url($XXIICentarRegular) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Albertusnova Thin";
+  src: url($AlbertusnovaThin) format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+//*::-webkit-scrollbar {
+//  display: none;
+//}
+
+:root {
+  --header_primary-low-mid: #c5b16f;
+  --d-nav-color--active: #d5bc75;
+  --d-icon-active: #d7c27d;
+  --d-icon-placeholder: #5b6168;
+  --sidebar-icon-color: #c5b16f;
+  --primary: #d6d6d6;
+  --primary-low: rgba(10, 20, 32, 0.7);
+  --primary-very-low: #151a25;
+  --tertiary: unset;
+  --secondary: #0b1321;
+}
+
+body {
+  background: url($BG_Main);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Noto Sans", sans-serif;
+}
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+#main-outlet-wrapper {
+  background-color: rgba(16, 21, 32, 0.9);
+  backdrop-filter: blur(0.8em);
+  padding-right: 2em;
+}
+
+.topic-list .topic-list-item-separator .topic-list-data,
+.small-action.topic-post-visited .topic-post-visited-line {
+  border-color: #1ca9c9 !important;
+  span {
+    color: #1ca9c9 !important;
+  }
+}
+
+blockquote,
+aside.quote .title {
+  background-color: rgba(30, 37, 51, 0.5) !important;
+  border-left: 2px solid rgba(119, 96, 48, 1) !important;
+}
+
+/* ===========================
+   Buttons & Icons Styles
+=========================== */
+@import "common/buttons.scss";
+
+/* ===========================
+   Header Styles
+=========================== */
+@import "common/header.scss";
+@import "common/header-links.scss";
+
+/* ===========================
+   Sidebar Styles
+=========================== */
+@import "common/sidebar.scss";
+
+/* ===========================
+   Category Styles
+=========================== */
+@import "common/categories.scss";
+@import "common/custom-category-news-gamenews.scss";
+@import "common/custom-category-boxes.scss";
+@import "common/custom-category-group.scss";
+
+/* ===========================
+   Scrollbar Styles
+=========================== */
+@import "common/scrollbar.scss";
+
+/* ===========================
+   Profile Styles
+=========================== */
+@import "common/profile.scss";
+
+/* ===========================
+   Select Kit Styles
+=========================== */
+@import "common/inputs.scss";
+
+/* ===========================
+   Admin Styles
+=========================== */
+@import "common/admin.scss";
+
+/* ===========================
+   404 Styles
+=========================== */
+@import "common/not-found.scss";
