@@ -163,9 +163,9 @@ export default class ScrollingPostStream extends MountWidget {
     }
 
     if (mainPost) {
-
+      console.log(mainPost, ' mainPost')
     } else {
-
+      console.log(mainPost, ' mainPost')
     }
 
     const posts = mainPost ? this.posts.slice(0, 1) : this.posts.slice(1, this.posts.length);
