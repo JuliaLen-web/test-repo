@@ -443,51 +443,12 @@
 
         </div>
 
-        <ComposerContainer/>
+        <div>
+            <div>Добавить комментарий</div>
+            <ComposerContainer/>
+        </div>
 
         {{#if this.loadedAllPosts}}
-            {{#if this.session.showSignupCta}}
-            {{! replace "Log In to Reply" with the infobox }}
-                <SignupCta/>
-            {{else}}
-                {{#if this.currentUser}}
-                    <span>
-                        <PluginOutlet
-                            @name="topic-above-footer-buttons"
-                            @connectorTagName="div"
-                            @outletArgs={{hash model=this.model}}
-                        />
-                    </span>
-
-                    <TopicFooterButtons
-                            @topic={{this.model}}
-                            @toggleMultiSelect={{action "toggleMultiSelect"}}
-                            @showTopicSlowModeUpdate={{route-action "showTopicSlowModeUpdate"}}
-                            @deleteTopic={{action "deleteTopic"}}
-                            @recoverTopic={{action "recoverTopic"}}
-                            @toggleClosed={{action "toggleClosed"}}
-                            @toggleArchived={{action "toggleArchived"}}
-                            @toggleVisibility={{action "toggleVisibility"}}
-                            @showTopicTimerModal={{route-action "showTopicTimerModal"}}
-                            @showFeatureTopic={{route-action "showFeatureTopic"}}
-                            @showChangeTimestamp={{route-action "showChangeTimestamp"}}
-                            @resetBumpDate={{action "resetBumpDate"}}
-                            @convertToPublicTopic={{action "convertToPublicTopic"}}
-                            @convertToPrivateMessage={{action "convertToPrivateMessage"}}
-                            @toggleBookmark={{action "toggleBookmark"}}
-                            @showFlagTopic={{route-action "showFlagTopic"}}
-                            @toggleArchiveMessage={{action "toggleArchiveMessage"}}
-                            @editFirstPost={{action "editFirstPost"}}
-                            @deferTopic={{action "deferTopic"}}
-                            @replyToPost={{action "replyToPost"}}
-                    />
-                {{else}}
-                    <AnonymousTopicFooterButtons @topic={{this.model}} />
-                {{/if}}
-            {{/if}}
-
-            <br/>
-
             <span>
                 <PluginOutlet
                         @name="topic-above-suggested"
