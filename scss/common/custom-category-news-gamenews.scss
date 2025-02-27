@@ -121,5 +121,16 @@ _portal {
     .topic-map {
       display: none !important;
     }
+
+    .topic-body .topic-meta-data {
+      padding-left: 0;
+      margin-left: 0;
+    }
+
+    .topic-post:not(.topic-owner) {
+      .onscreen-post .row {
+        gap: 20px;
+      }
+    }
   }
 }
