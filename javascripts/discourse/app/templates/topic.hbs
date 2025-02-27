@@ -443,6 +443,9 @@
 
         </div>
 
+
+        <!-- composer -->
+
         <div class="custom-comment-control">
 <!--            <div class="custom-comment-control-title">Добавить комментарий</div>-->
             <ComposerBody
@@ -582,10 +585,7 @@
                                             </div>
                                         {{/if}}
 
-                                        <div
-                                                class="title-and-category
-                    {{ 'with-preview'}}"
-                                        >
+                                        <div class="title-and-category {{ 'with-preview'}}">
                                             <ComposerTitle
                                                     @composer={{this.composer.model}}
                                                     @lastValidatedAt={{this.composer.lastValidatedAt}}
@@ -859,6 +859,8 @@
                 {{/if}}
             </ComposerBody>
         </div>
+
+        <!-- composer -->
 
         {{#if this.loadedAllPosts}}
             <span>
