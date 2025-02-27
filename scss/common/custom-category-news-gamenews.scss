@@ -23,7 +23,7 @@ _portal {
       background: radial-gradient(33.38% 49.95% at 50% 50.05%, #1F314C 0%, rgba(0, 0, 0, 0) 95.28%);
     }
 
-    #topic-footer-buttons,
+    //#topic-footer-buttons,
     .sidebar-wrapper {
       display: none;
     }
@@ -132,6 +132,27 @@ _portal {
         gap: 20px;
       }
     }
+  }
+
+  .small-action .small-action-desc {
+    width: 100%;
+  }
+
+  .custom-comment-control {
+    box-sizing: border-box;
+    padding: 16px 16px 16px 8px;
+    border-top: 2px solid #776030;
+    background: radial-gradient(62.11% 100% at 50% 0%, #121B2E 0%, #0B1321 90.72%);
+    box-shadow: 0px -2px 10px 0px rgba(25, 38, 60, 0.15);
+  }
+
+  .custom-comment-control-title {
+    color: #FFF;
+    font-family: "XXII Centar";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 108.333% */
   }
 
   #reply-control {
