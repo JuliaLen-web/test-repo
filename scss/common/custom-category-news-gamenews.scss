@@ -1,6 +1,6 @@
 .category.archetype-regular,
 _portal {
-  background: radial-gradient(50vw 50vh at 50vw 40vh, #1F314C 0%, #1A2233 95.28%), url($bgPattern) top/600px repeat, #1C2436;
+  background: url($bgPattern) top/600px repeat, radial-gradient(30vw 45vh at 50vw 50vh, #1F314C 0%, #1A2233 95.28%), #1C2436;
   background-blend-mode: luminosity;
 
   #main-outlet-wrapper {
