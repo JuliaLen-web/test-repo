@@ -246,6 +246,7 @@ export default class MainScrollingPostStream extends MountWidget {
     const readPostNumbers = new Set();
 
     const newPrev = new Set();
+    console.log(nearby, onscreen)
     nearby.forEach((idx) => {
       const post = posts.objectAt(idx);
 
@@ -266,7 +267,6 @@ export default class MainScrollingPostStream extends MountWidget {
 
     this._previouslyNearby = newPrev;
     this.screenTrack.setOnscreen(onscreenPostNumbers, readPostNumbers);
-    console.log(onscreenPostNumbers, readPostNumbers)
   }
 
   _scrollTriggered() {
