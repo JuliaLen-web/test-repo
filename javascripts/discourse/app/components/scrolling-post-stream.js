@@ -165,8 +165,6 @@ export default class ScrollingPostStream extends MountWidget {
     const posts = this.posts;
     const refresh = (cb) => this.queueRerender(cb);
     if (onscreen.length) {
-      console.log(posts);
-      console.log(mainPost);
       const first = posts.objectAt(onscreen[0]);
       if (this._topVisible !== first) {
         this._topVisible = first;

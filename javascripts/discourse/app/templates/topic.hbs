@@ -259,6 +259,8 @@
                         {{#unless this.model.postStream.loadingFilter}}
 <!--                            arr.slice(1, arr.length) -->
 <!--                            .slice(0, 1) -->
+                        <div class="onlyMainPost">
+
                             <ScrollingPostStream
                                     @mainPost={{true}}
                                     @posts={{this.postsToRender}}
@@ -308,13 +310,14 @@
                                     @showInvite={{route-action "showInvite"}}
                                     @showPagePublish={{route-action "showPagePublish"}}
                             />
+                        </div>
 
 <!--                            <CustomComposerContainer />-->
 
                             <PluginOutlet @name="composer-container">
                                 <ComposerContainer />
                             </PluginOutlet>
-
+                        <div class="notMainPost">
                             <ScrollingPostStream
                                     @mainPost={{false}}
                                     @posts={{this.postsToRender}}
@@ -364,6 +367,7 @@
                                     @showInvite={{route-action "showInvite"}}
                                     @showPagePublish={{route-action "showPagePublish"}}
                             />
+                        </div>
                         {{/unless}}
 
                         <ConditionalLoadingSpinner
