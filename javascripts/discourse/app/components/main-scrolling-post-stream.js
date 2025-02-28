@@ -251,8 +251,6 @@ export default class MainScrollingPostStream extends MountWidget {
 
       this._previouslyNearby.delete(post.post_number);
 
-      console.log(onscreenPostNumbers)
-
       if (onscreen.includes(idx)) {
         onscreenPostNumbers.add(post.post_number);
         if (post.read) {
@@ -268,6 +266,7 @@ export default class MainScrollingPostStream extends MountWidget {
 
     this._previouslyNearby = newPrev;
     this.screenTrack.setOnscreen(onscreenPostNumbers, readPostNumbers);
+    console.log(onscreenPostNumbers, readPostNumbers)
   }
 
   _scrollTriggered() {
@@ -278,7 +277,6 @@ export default class MainScrollingPostStream extends MountWidget {
     this.queueRerender(() => {
       if (staged) {
         const postNumber = staged.post_number;
-        console.log(staged.post_number)
         DiscourseURL.jumpToPost(postNumber, { skipIfOnScreen: true });
       }
     });
