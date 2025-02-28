@@ -161,7 +161,13 @@ export default class TopicController extends Controller.extend(
     return this.capabilities.isAndroid ? posts : postsWithPlaceholders;
   }
 
+  @discourseComputed(
+    "model.postStream.posts",
+    "model.postStream.postsWithPlaceholders"
+  )
   postsToRender(posts, postsWithPlaceholders) {
+    console.log(posts)
+    console.log(typeof posts)
     return this.capabilities.isAndroid ? posts : postsWithPlaceholders;
   }
 
