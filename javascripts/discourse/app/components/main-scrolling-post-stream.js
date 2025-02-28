@@ -136,7 +136,7 @@ export default class MainScrollingPostStream extends MountWidget {
       }
 
       if (viewBottom >= windowTop && viewTop <= windowBottom) {
-        onscreen.push(bottomView);
+        // onscreen.push(bottomView);
       }
 
       if (
@@ -149,7 +149,7 @@ export default class MainScrollingPostStream extends MountWidget {
       }
 
       lastBottom = viewBottom;
-      nearby.push(bottomView);
+      // nearby.push(bottomView);
       bottomView++;
     }
 
