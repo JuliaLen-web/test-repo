@@ -12,26 +12,6 @@ _portal {
     line-height: normal;
   }
 
-  .badge-category__wrapper .badge-category:before {
-    content: none;
-  }
-
-  .badge-category__wrapper {
-    margin-bottom: 20px;
-    position: relative;
-    padding-left: 34px;
-    box-sizing: border-box;
-
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      height: 24px;
-      width: 24px;
-      background: url($iconCategory) center/24px repeat
-    }
-  }
-
   .topic-post>article {
     border: none;
   }
@@ -153,6 +133,26 @@ _portal {
         height: 36px;
         width: 36px;
         background: url($iconTitle) center/36px repeat
+      }
+    }
+
+    #topic-title .badge-category__wrapper .badge-category:before {
+      content: none;
+    }
+
+    #topic-title .badge-category__wrapper {
+      margin-bottom: 20px;
+      position: relative;
+      padding-left: 34px;
+      box-sizing: border-box;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        height: 24px;
+        width: 24px;
+        background: url($iconCategory) center/24px repeat
       }
     }
 
