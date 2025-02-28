@@ -166,7 +166,9 @@ export default class ScrollingPostStream extends MountWidget {
       console.log(mainPost, ' mainPost')
     } else {
       console.log(mainPost, ' mainPost')
-    }
+
+
+    console.log(mainPost, ' mainPost');
 
     const posts = mainPost ? this.posts.slice(0, 1) : this.posts.slice(1, this.posts.length);
     const refresh = (cb) => this.queueRerender(cb);
