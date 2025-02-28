@@ -70,8 +70,8 @@ export default class MainScrollingPostStream extends MountWidget {
 
     const windowHeight = window.innerHeight;
     const slack = Math.round(windowHeight * 5);
-    const onscreen = [];
-    const nearby = [];
+    const onscreen = [0];
+    const nearby = [0];
     const windowTop = document.scrollingElement.scrollTop;
     const postsWrapperTop = domUtils.offset(
       document.querySelector(".posts-wrapper")
@@ -149,7 +149,7 @@ export default class MainScrollingPostStream extends MountWidget {
       }
 
       lastBottom = viewBottom;
-      nearby.push(bottomView);
+      // nearby.push(bottomView);
       bottomView++;
     }
 
