@@ -43,6 +43,17 @@ _portal {
     }
 
     .topic-owner {
+      .embedded-posts.bottom {
+        max-width: none;
+        .topic-body {
+          margin-left: 75px;
+
+          blockquote, ul, p {
+            max-width: none;
+          }
+        }
+      }
+
       .lightbox-wrapper *,
       .lightbox-wrapper {
         width: 100%;
@@ -198,13 +209,13 @@ _portal {
     line-height: 26px; /* 108.333% */
     margin-bottom: 16px;
     display: inline-flex;
+    align-items: baseline;
     gap: 8px;
 
     span {
       opacity: 0.75;
       font-size: 12px;
       line-height: normal;
-
     }
   }
 
