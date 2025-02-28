@@ -178,7 +178,9 @@ _portal {
     transform: none;
   }
 
-  .onlyMainPost .post-stream .topic-post:not(.topic-owner) {
+  .onlyMainPost .post-stream .topic-post:not(.topic-owner),
+  .onlyMainPost .post-stream .gap,
+  .onlyMainPost .post-stream .small-action {
     display: none;
   }
 
