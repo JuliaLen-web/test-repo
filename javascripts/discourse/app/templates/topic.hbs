@@ -309,7 +309,10 @@
                                     @showPagePublish={{route-action "showPagePublish"}}
                             />
 
-                            <CustomComposerContainer />
+<!--                            <CustomComposerContainer />-->
+
+                            <PluginOutlet @name="custom-composer-container">
+                            </PluginOutlet>
 
                             <ScrollingPostStream
                                     @mainPost={{false}}
