@@ -44,7 +44,7 @@ export default class MainScrollingPostStream extends MountWidget {
   buildArgs() {
     return this.getProperties(
       "mainPost",
-      "posts",
+      "posts".shift(),
       "canCreatePost",
       "filteredPostsCount",
       "multiSelect",
@@ -82,11 +82,11 @@ export default class MainScrollingPostStream extends MountWidget {
 
     const viewportTop = windowTop - slack;
     const topView = findTopView(
-      postsNodes.shift(),
+      postsNodes,
       viewportTop,
       postsWrapperTop,
       0,
-      0
+      postsNodes.length - 1
     );
 
     let windowBottom = windowTop + windowHeight;
