@@ -19,6 +19,8 @@ _portal {
 
   .badge-category__wrapper {
     position: relative;
+    padding-left: 34px;
+    box-sizing: border-box;
 
     &:before {
       content: '';
