@@ -9,22 +9,10 @@ _portal {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url($orbitalsBg) center 60px/contain no-repeat;
+    background: url($orbitalsBg) center top/contain no-repeat;
     position: relative;
     z-index: 1;
 
-    //&:after {
-    //  content: '';
-    //  position: absolute;
-    //  z-index: -1;
-    //  max-height: 100vh;
-    //  height: 100%;
-    //  width: 100%;
-    //  opacity: 0.5;
-    //  background: radial-gradient(50vw 45vh at 50vw 50vh, #1F314C 0%, #1A2233 95.28%);
-    //}
-
-    //#topic-footer-buttons,
     .sidebar-wrapper {
       display: none;
     }
