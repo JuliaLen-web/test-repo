@@ -177,9 +177,10 @@ _portal {
     }
 
     .topic-post:not(.topic-owner) {
+      border-bottom: 1px solid rgba(20, 63, 99, 0.00);
+
       .onscreen-post .row {
         gap: 20px;
-        border-bottom: 1px solid rgba(20, 63, 99, 0.00);
       }
 
       .topic-body {
