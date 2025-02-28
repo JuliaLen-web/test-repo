@@ -263,7 +263,7 @@
 
                             <ScrollingPostStream
                                     @mainPost={{true}}
-                                    @posts={{this.postMainToRender}}
+                                    @posts={{this.postsToRender}}
                                     @canCreatePost={{this.model.details.can_create_post}}
                                     @multiSelect={{this.multiSelect}}
                                     @selectedPostsCount={{this.selectedPostsCount}}
@@ -317,6 +317,7 @@
                             <PluginOutlet @name="composer-container">
                                 <ComposerContainer />
                             </PluginOutlet>
+
                         <div class="notMainPost">
                             <ScrollingPostStream
                                     @mainPost={{false}}
