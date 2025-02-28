@@ -77,9 +77,10 @@ export default class MainScrollingPostStream extends MountWidget {
     const postsWrapperTop = domUtils.offset(
       document.querySelector(".posts-wrapper")
     ).top;
-    const postsNodes = this.element.querySelector(
+    const postsNodes = [];
+    postsNodes.push(this.element.querySelector(
       ".onscreen-post, .cloaked-post"
-    );
+    ))
 
     const viewportTop = windowTop - slack;
     const topView = findTopView(
