@@ -86,7 +86,7 @@ export default class MainScrollingPostStream extends MountWidget {
       viewportTop,
       postsWrapperTop,
       0,
-      postsNodes.length - 1
+      0
     );
 
     let windowBottom = windowTop + windowHeight;
@@ -214,31 +214,27 @@ export default class MainScrollingPostStream extends MountWidget {
         });
       }
 
-      // const last = posts.objectAt(onscreen[onscreen.length - 1]);
-      // if (this._bottomVisible !== last) {
-      //   this._bottomVisible = last;
-      //   this.bottomVisibleChanged({ post: last, refresh });
-      // }
+      const last = posts.objectAt(onscreen[onscreen.length - 1]);
+      if (this._bottomVisible !== last) {
+        this._bottomVisible = last;
+        this.bottomVisibleChanged({ post: last, refresh });
+      }
 
-      // const currentPostObj = posts.objectAt(currentPost);
-      // const changedPost = this._currentPostObj !== currentPostObj;
-      // if (changedPost) {
-      //   this._currentPostObj = currentPostObj;
-      //   this.currentPostChanged({ post: currentPostObj });
-      // }
+      const currentPostObj = posts.objectAt(currentPost);
+      const changedPost = this._currentPostObj !== currentPostObj;
+      if (changedPost) {
+        this._currentPostObj = currentPostObj;
+        this.currentPostChanged({ post: currentPostObj });
+      }
 
-      // if (percent !== null) {
+      if (percent !== null) {
         percent = Math.max(0.0, Math.min(1.0, percent));
 
-        // if (changedPost || this._currentPercent !== percent) {
-        //   this._currentPercent = percent;
-        //   this.currentPostScrolled({ percent });
-        // }
-      // }
-
-      this._bottomVisible = null;
-      this._currentPostObj = null;
-      this._currentPercent = null;
+        if (changedPost || this._currentPercent !== percent) {
+          this._currentPercent = percent;
+          this.currentPostScrolled({ percent });
+        }
+      }
     } else {
       this._topVisible = null;
       this._bottomVisible = null;
@@ -248,10 +244,6 @@ export default class MainScrollingPostStream extends MountWidget {
 
     const onscreenPostNumbers = new Set();
     const readPostNumbers = new Set();
-
-    console.log(nearby)
-
-    console.log(onscreen)
 
     const newPrev = new Set();
     nearby.forEach((idx) => {
