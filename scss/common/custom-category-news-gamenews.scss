@@ -32,6 +32,10 @@ _portal {
     }
   }
 
+  .topic-post>article {
+    border: none;
+  }
+
   #main-outlet-wrapper {
     backdrop-filter: none;
     padding-inline: 2em;
