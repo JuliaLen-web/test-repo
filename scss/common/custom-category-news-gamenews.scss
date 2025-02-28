@@ -3,6 +3,16 @@ _portal {
   background: radial-gradient(50vw 45vh at 50vw 50vh, #1F314C 0%, #1A2233 95.28%), url($bgPattern) top/900px repeat;
   background-blend-mode: overlay, normal;
 
+  .badge-category__wrapper .badge-category__name {
+    color: #B19F63;
+    font-family: "Albertusnova Thin";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 18px; /* 81.818% */
+    margin-bottom: 20px;
+  }
+
   #main-outlet-wrapper {
     backdrop-filter: none;
     padding-inline: 2em;
@@ -125,6 +135,7 @@ _portal {
     .topic-post:not(.topic-owner) {
       .onscreen-post .row {
         gap: 20px;
+        border-bottom: 1px solid rgba(20, 63, 99, 0.00);
       }
     }
   }
