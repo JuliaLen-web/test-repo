@@ -11,6 +11,7 @@ import { cloak, uncloak } from "discourse/widgets/post-stream";
 const DEBOUNCE_DELAY = 50;
 
 function findTopView(posts, viewportTop, postsWrapperTop, min, max) {
+  console.log(posts)
   if (max < min) {
     return min;
   }
