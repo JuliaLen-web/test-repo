@@ -78,7 +78,7 @@ export default class MainScrollingPostStream extends MountWidget {
     ).top;
     const postsNodes = this.element.querySelectorAll(
       ".onscreen-post, .cloaked-post"
-    ).slice(0, 1);
+    );
 
     const viewportTop = windowTop - slack;
     const topView = findTopView(
@@ -135,9 +135,9 @@ export default class MainScrollingPostStream extends MountWidget {
         break;
       }
 
-      if (viewBottom >= windowTop && viewTop <= windowBottom) {
-        onscreen.push(bottomView);
-      }
+      // if (viewBottom >= windowTop && viewTop <= windowBottom) {
+      //   onscreen.push(bottomView);
+      // }
 
       if (
         currentPost === null &&
@@ -251,6 +251,8 @@ export default class MainScrollingPostStream extends MountWidget {
 
       this._previouslyNearby.delete(post.post_number);
 
+      console.log(onscreenPostNumbers)
+
       if (onscreen.includes(idx)) {
         onscreenPostNumbers.add(post.post_number);
         if (post.read) {
@@ -276,6 +278,7 @@ export default class MainScrollingPostStream extends MountWidget {
     this.queueRerender(() => {
       if (staged) {
         const postNumber = staged.post_number;
+        console.log(staged.post_number)
         DiscourseURL.jumpToPost(postNumber, { skipIfOnScreen: true });
       }
     });
