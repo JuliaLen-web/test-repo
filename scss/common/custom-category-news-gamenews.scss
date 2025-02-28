@@ -177,7 +177,20 @@ _portal {
     }
 
     .topic-post:not(.topic-owner) {
+      position: relative;
       border-bottom: 1px solid rgba(20, 63, 99, 0.00);
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 1px;
+        width: 100%;
+        display: block;
+        background: linear-gradient(90deg, rgba(20, 63, 99, 0) 0%, #143F63 10.02%, #143F63 90.12%, rgba(20, 63, 99, 0) 100%);
+      }
 
       .onscreen-post .row {
         gap: 20px;
@@ -187,6 +200,10 @@ _portal {
         border: none;
       }
     }
+  }
+
+  .topic-avatar {
+    border-top: none;
   }
 
   .small-action .small-action-desc {
