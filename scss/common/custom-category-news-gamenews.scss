@@ -264,7 +264,11 @@ _portal {
   }
 
   .post-notice {
-    max-width: 100%;
+    margin-inline: auto;
     margin-top: 8px;
+  }
+
+  .post-notice.old {
+    border-top: none;
   }
 }
