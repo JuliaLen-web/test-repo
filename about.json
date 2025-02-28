@@ -35,7 +35,9 @@
     "mainBtnCheckingHover": "assets/main_btn_checking_hover.png",
     "mainBtnCheckingActive": "assets/main_btn_checking_active.png",
     "orbitalsBg": "assets/orbitals.png",
-    "bgPattern": "assets/bg-pattern.png"
+    "bgPattern": "assets/bg-pattern.png",
+    "iconCategory": "assets/icon-subtitle.png",
+    "iconTitle": "assets/left-arrow-title.svg"
   },
   "color_schemes": {
     "BS_Color": {

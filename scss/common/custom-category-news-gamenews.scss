@@ -13,13 +13,30 @@ _portal {
     margin-bottom: 20px;
   }
 
+  .badge-category__wrapper .badge-category:before {
+    content: none;
+  }
+
+  .badge-category__wrapper {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      height: 24px;
+      width: 24px;
+      background: url($iconCategory) center/24px repeat
+    }
+  }
+
   #main-outlet-wrapper {
     backdrop-filter: none;
     padding-inline: 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url($orbitalsBg) center top/contain no-repeat;
+    background: url($orbitalsBg) center 10px/contain no-repeat;
     position: relative;
     z-index: 1;
 
@@ -107,8 +124,6 @@ _portal {
 
     .topic-body {
       width: 100%;
-
-
     }
 
     #topic-title .fancy-title {
@@ -121,6 +136,18 @@ _portal {
       line-height: 112%;
       letter-spacing: 0.75px;
       text-transform: uppercase;
+      position: relative;
+      padding-left: 46px;
+      box-sizing: border-box;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        height: 36px;
+        width: 36px;
+        background: url($iconTitle) center/36px repeat
+      }
     }
 
     .topic-map {
