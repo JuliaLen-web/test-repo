@@ -43,7 +43,6 @@ export default class ScrollingPostStream extends MountWidget {
 
   buildArgs() {
     return this.getProperties(
-      "mainPost",
       "posts",
       "canCreatePost",
       "filteredPostsCount",
@@ -162,17 +161,10 @@ export default class ScrollingPostStream extends MountWidget {
       }
     }
 
-    if (mainPost) {
-      console.log(mainPost, ' mainPost')
-    } else {
-      console.log(mainPost, ' mainPost')
-
-
-    console.log(mainPost, ' mainPost');
-
-    const posts = mainPost ? this.posts.slice(0, 1) : this.posts.slice(1, this.posts.length);
+    const posts = this.posts;
     const refresh = (cb) => this.queueRerender(cb);
     if (onscreen.length) {
+      console.log(posts);
       const first = posts.objectAt(onscreen[0]);
       if (this._topVisible !== first) {
         this._topVisible = first;
