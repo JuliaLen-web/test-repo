@@ -3,15 +3,6 @@ _portal {
   background: radial-gradient(50vw 45vh at 50vw 50vh, #1F314C 0%, #1A2233 95.28%), url($bgPattern) top/900px repeat;
   background-blend-mode: overlay, normal;
 
-  .badge-category__wrapper .badge-category__name {
-    color: #B19F63;
-    font-family: "Albertusnova Thin";
-    font-size: 22px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-  }
-
   .topic-post>article {
     border: none;
   }
@@ -134,6 +125,15 @@ _portal {
         width: 36px;
         background: url($iconTitle) center/36px repeat
       }
+    }
+
+    #topic-title .badge-category__wrapper .badge-category__name {
+      color: #B19F63;
+      font-family: "Albertusnova Thin";
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
     }
 
     #topic-title .badge-category__wrapper .badge-category:before {
