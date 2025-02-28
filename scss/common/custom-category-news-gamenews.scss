@@ -1,7 +1,7 @@
 .category.archetype-regular,
 _portal {
-  background: url($bgPattern) lightgray 0% 0% / 90px 90px repeat, #1A2233;
-  background-blend-mode: overlay, normal;
+  background: radial-gradient(50vw 50vh at 50vw 40vh, #1F314C 0%, #1A2233 95.28%), url($bgPattern) top/600px repeat, #1C2436;
+  background-blend-mode: luminosity;
 
   #main-outlet-wrapper {
     backdrop-filter: none;
@@ -13,16 +13,16 @@ _portal {
     position: relative;
     z-index: 1;
 
-    &:after {
-      content: '';
-      position: absolute;
-      z-index: -1;
-      max-height: 100vh;
-      height: 100%;
-      width: 100%;
-      opacity: 0.5;
-      background: radial-gradient(33.38% 49.95% at 50% 50.05%, #1F314C 0%, rgba(0, 0, 0, 0) 95.28%);
-    }
+    //&:after {
+    //  content: '';
+    //  position: absolute;
+    //  z-index: -1;
+    //  max-height: 100vh;
+    //  height: 100%;
+    //  width: 100%;
+    //  opacity: 0.5;
+    //  background: radial-gradient(33.38% 49.95% at 50% 50.05%, #1F314C 0%, rgba(0, 0, 0, 0) 95.28%);
+    //}
 
     //#topic-footer-buttons,
     .sidebar-wrapper {
