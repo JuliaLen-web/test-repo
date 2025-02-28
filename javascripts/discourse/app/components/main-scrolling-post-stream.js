@@ -249,6 +249,10 @@ export default class MainScrollingPostStream extends MountWidget {
     const onscreenPostNumbers = new Set();
     const readPostNumbers = new Set();
 
+    console.log(nearby)
+
+    console.log(onscreen)
+
     const newPrev = new Set();
     nearby.forEach((idx) => {
       const post = posts.objectAt(idx);
