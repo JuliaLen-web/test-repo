@@ -156,8 +156,11 @@ export default class TopicController extends Controller.extend(
     "model.postStream.postsWithPlaceholders"
   )
   postMainToRender(posts, postsWithPlaceholders) {
-    return this.capabilities.isAndroid ? posts.shift() : postsWithPlaceholders.shift();
+    console.log(posts)
+    console.log(typeof posts)
+    return this.capabilities.isAndroid ? posts : postsWithPlaceholders;
   }
+
   postsToRender(posts, postsWithPlaceholders) {
     return this.capabilities.isAndroid ? posts : postsWithPlaceholders;
   }
