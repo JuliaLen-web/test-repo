@@ -82,11 +82,11 @@ export default class MainScrollingPostStream extends MountWidget {
 
     const viewportTop = windowTop - slack;
     const topView = findTopView(
-      postsNodes,
+      postsNodes.shift(),
       viewportTop,
       postsWrapperTop,
       0,
-      postsNodes.length - 1
+      0
     );
 
     let windowBottom = windowTop + windowHeight;
