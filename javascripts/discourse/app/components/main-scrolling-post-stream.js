@@ -78,7 +78,7 @@ export default class MainScrollingPostStream extends MountWidget {
     ).top;
     const postsNodes = this.element.querySelectorAll(
       ".onscreen-post, .cloaked-post"
-    );
+    ).slice(0, 1);
 
     const viewportTop = windowTop - slack;
     const topView = findTopView(
@@ -86,7 +86,7 @@ export default class MainScrollingPostStream extends MountWidget {
       viewportTop,
       postsWrapperTop,
       0,
-      0
+      postsNodes.length - 1
     );
 
     let windowBottom = windowTop + windowHeight;
@@ -136,7 +136,7 @@ export default class MainScrollingPostStream extends MountWidget {
       }
 
       if (viewBottom >= windowTop && viewTop <= windowBottom) {
-        // onscreen.push(bottomView);
+        onscreen.push(bottomView);
       }
 
       if (
@@ -149,7 +149,7 @@ export default class MainScrollingPostStream extends MountWidget {
       }
 
       lastBottom = viewBottom;
-      // nearby.push(bottomView);
+      nearby.push(bottomView);
       bottomView++;
     }
 
