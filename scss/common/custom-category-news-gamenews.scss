@@ -165,11 +165,11 @@ _portal {
     background: rgba(0, 0, 0, 0.24);
   }
 
-  .onlyMainPost .post-stream:not:first-child {
+  .onlyMainPost .post-stream .topic-post:not(:first-of-type) {
     display: none;
   }
 
-  .notMainPost .post-stream:first-child {
+  .notMainPost .post-stream .topic-post:first-of-type {
     display: none;
   }
 }
