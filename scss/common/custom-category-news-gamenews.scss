@@ -173,7 +173,7 @@ _portal {
     border: 1px solid #1E2533;
   }
 
-  .has-sidebar-page #reply-control:not(.fullscreen).hide-preview {
+  &.has-sidebar-page #reply-control:not(.fullscreen).hide-preview {
     max-width: none;
     transform: none;
   }
