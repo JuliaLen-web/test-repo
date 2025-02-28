@@ -59,6 +59,22 @@ _portal {
 
       .topic-body {
         border: none;
+
+        .contents {
+          img, video {
+            object-fit: cover;
+          }
+
+          p {
+            color: #FFF;
+            font-family: "XXII Centar Regular";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 133.333%;
+            letter-spacing: 0.72px;
+          }
+        }
       }
 
       .topic-body .contents {
@@ -91,21 +107,7 @@ _portal {
     .topic-body {
       width: 100%;
 
-      .contents {
-        img, video {
-          object-fit: cover;
-        }
 
-        p {
-          color: #FFF;
-          font-family: "XXII Centar Regular";
-          font-size: 18px;
-          font-style: normal;
-          font-weight: 300;
-          line-height: 133.333%;
-          letter-spacing: 0.72px;
-        }
-      }
     }
 
     #topic-title .fancy-title {
