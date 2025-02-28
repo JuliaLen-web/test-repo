@@ -160,6 +160,11 @@ _portal {
     font-weight: 400;
     line-height: 26px; /* 108.333% */
     margin-bottom: 16px;
+
+    span {
+      font-size: 12px;
+      line-height: normal;
+    }
   }
 
   #reply-control {
