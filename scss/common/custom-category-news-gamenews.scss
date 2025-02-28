@@ -169,11 +169,11 @@ _portal {
     background: rgba(0, 0, 0, 0.24);
   }
 
-  .onlyMainPost .post-stream .topic-post:not(:first-of-type) {
+  .onlyMainPost .post-stream .topic-post:not(.topic-owner) {
     display: none;
   }
 
-  .notMainPost .post-stream .topic-post:first-of-type {
+  .notMainPost .post-stream .topic-post.topic-owner {
     display: none;
   }
 }
