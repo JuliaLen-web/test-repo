@@ -1,6 +1,7 @@
 .category.archetype-regular,
 _portal {
-  background: url($bgPattern) top/600px repeat, #1A2233;
+  background: url($bgPattern) lightgray 0% 0% / 90px 90px repeat, #1A2233;
+  background-blend-mode: overlay, normal;
 
   #main-outlet-wrapper {
     backdrop-filter: none;
