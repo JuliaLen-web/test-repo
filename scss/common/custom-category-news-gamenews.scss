@@ -34,10 +34,6 @@ _portal {
       padding-top: 4.4rem;
       padding-bottom: 8rem;
 
-      .lightbox-wrapper *,
-      .lightbox-wrapper {
-        width: 100%;
-      }
     }
 
     .container.posts {
@@ -54,6 +50,11 @@ _portal {
     }
 
     .topic-owner {
+      .lightbox-wrapper *,
+      .lightbox-wrapper {
+        width: 100%;
+      }
+
       .topic-avatar {
         display: none;
       }
