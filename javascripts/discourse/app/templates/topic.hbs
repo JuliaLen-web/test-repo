@@ -69,21 +69,6 @@
                             </PluginOutlet>
                         </div>
 
-                        {{#if this.showCategoryChooser}}
-                            <div class="edit-category__wrapper">
-                                <PluginOutlet
-                                        @name="edit-topic-category"
-                                        @outletArgs={{hash model=this.model buffered=this.buffered}}
-                                >
-                                    <CategoryChooser
-                                            @value={{this.buffered.category_id}}
-                                            @onChange={{action "topicCategoryChanged"}}
-                                            class="small"
-                                    />
-                                </PluginOutlet>
-                            </div>
-                        {{/if}}
-
                         {{#if this.canEditTags}}
                             <div class="edit-tags__wrapper">
                                 <PluginOutlet
@@ -140,12 +125,9 @@
                     </div>
 
                 {{else}}
-                    <PluginOutlet
-                            @name="topic-category-wrapper"
-                            @outletArgs={{hash topic=this.model}}
-                    >
-                        <TopicCategory @topic={{this.model}} class="topic-category"/>
-                    </PluginOutlet>
+                    <div class="topic-category">
+                        <span>Broken Sun</span>
+                    </div>
 
                     <h1 data-topic-id={{this.model.id}}>
                         {{#unless this.model.is_warning}}
@@ -257,9 +239,8 @@
                         </span>
 
                         {{#unless this.model.postStream.loadingFilter}}
-                        <div class="onlyMainPost">
-                            <ScrollingPostStream
-                                    @mainPost={{true}}
+
+                        <ScrollingPostStream
                                     @posts={{this.postsToRender}}
                                     @canCreatePost={{this.model.details.can_create_post}}
                                     @multiSelect={{this.multiSelect}}
@@ -306,64 +287,7 @@
                                     @fillGapAfter={{action "fillGapAfter"}}
                                     @showInvite={{route-action "showInvite"}}
                                     @showPagePublish={{route-action "showPagePublish"}}
-                            />
-                        </div>
-
-                        <PluginOutlet @name="composer-container">
-                            <ComposerContainer />
-                        </PluginOutlet>
-
-                        <div class="notMainPost">
-                            <ScrollingPostStream
-                                    @mainPost={{false}}
-                                    @posts={{this.postsToRender}}
-                                    @canCreatePost={{this.model.details.can_create_post}}
-                                    @multiSelect={{this.multiSelect}}
-                                    @selectedPostsCount={{this.selectedPostsCount}}
-                                    @filteredPostsCount={{this.model.postStream.filteredPostsCount}}
-                                    @selectedQuery={{this.selectedQuery}}
-                                    @gaps={{this.model.postStream.gaps}}
-                                    @showReadIndicator={{this.model.show_read_indicator}}
-                                    @streamFilters={{this.model.postStream.streamFilters}}
-                                    @lastReadPostNumber={{this.userLastReadPostNumber}}
-                                    @highestPostNumber={{this.highestPostNumber}}
-                                    @showFlags={{action "showPostFlags"}}
-                                    @editPost={{action "editPost"}}
-                                    @showHistory={{route-action "showHistory"}}
-                                    @showLogin={{route-action "showLogin"}}
-                                    @showRawEmail={{route-action "showRawEmail"}}
-                                    @deletePost={{action "deletePost"}}
-                                    @permanentlyDeletePost={{action "permanentlyDeletePost"}}
-                                    @recoverPost={{action "recoverPost"}}
-                                    @expandHidden={{action "expandHidden"}}
-                                    @toggleBookmark={{action "toggleBookmark"}}
-                                    @togglePostType={{action "togglePostType"}}
-                                    @rebakePost={{action "rebakePost"}}
-                                    @changePostOwner={{action "changePostOwner"}}
-                                    @grantBadge={{action "grantBadge"}}
-                                    @changeNotice={{action "changeNotice"}}
-                                    @lockPost={{action "lockPost"}}
-                                    @unlockPost={{action "unlockPost"}}
-                                    @unhidePost={{action "unhidePost"}}
-                                    @replyToPost={{action "replyToPost"}}
-                                    @toggleWiki={{action "toggleWiki"}}
-                                    @showTopReplies={{action "showTopReplies"}}
-                                    @cancelFilter={{action "cancelFilter"}}
-                                    @removeAllowedUser={{action "removeAllowedUser"}}
-                                    @removeAllowedGroup={{action "removeAllowedGroup"}}
-                                    @topVisibleChanged={{action "topVisibleChanged"}}
-                                    @currentPostChanged={{action "currentPostChanged"}}
-                                    @currentPostScrolled={{action "currentPostScrolled"}}
-                                    @bottomVisibleChanged={{action "bottomVisibleChanged"}}
-                                    @togglePostSelection={{action "togglePostSelection"}}
-                                    @selectReplies={{action "selectReplies"}}
-                                    @selectBelow={{action "selectBelow"}}
-                                    @fillGapBefore={{action "fillGapBefore"}}
-                                    @fillGapAfter={{action "fillGapAfter"}}
-                                    @showInvite={{route-action "showInvite"}}
-                                    @showPagePublish={{route-action "showPagePublish"}}
-                            />
-                        </div>
+                        />
                         {{/unless}}
 
                         <ConditionalLoadingSpinner

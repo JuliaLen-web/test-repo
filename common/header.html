@@ -20,8 +20,6 @@
         data-template-name="topic.hbs"
 ></script>
 <script type="text/x-handlebars" data-template-name="components/composer-container">
-  <div class="custom-comment-control">
-    <div class="custom-comment-control-title">Добавить комментарий<span>(Выберите пост, на который хотите ответить)</span></div>
     <ComposerBody
             @composer={{this.composer.model}}
             @showPreview={{this.composer.isPreviewVisible}}
@@ -30,7 +28,7 @@
             @cancelled={{this.composer.cancelled}}
             @save={{this.composer.saveAction}}
     >
-      <div class="grippie"></div>
+      <div class="custom-comment-control-title">Добавить комментарий<span>(Выберите пост, на который хотите ответить)</span></div>
       {{#if this.composer.visible}}
         {{html-class (if this.composer.isPreviewVisible "composer-has-preview")}}
         <ComposerMessages
@@ -438,5 +436,4 @@
         {{/if}}
       {{/if}}
     </ComposerBody>
-  </div>
 </script>
