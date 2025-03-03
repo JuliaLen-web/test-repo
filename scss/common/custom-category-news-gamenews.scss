@@ -273,11 +273,14 @@ _portal {
     button {
       position: relative;
       border-top: 1px solid #F9DF94;
-      border-bottom: 1px solid #F9DF94;
+      border-bottom: 1px solid #8F6616;
       background: linear-gradient(180deg, rgba(201, 188, 146, 0.15) 0%, rgba(183, 149, 77, 0.15) 100%);
       backdrop-filter: blur(1.5px);
       margin-inline: 8px;
       padding-inline: 8px;
+      height: 40px;
+      border-inline: none;
+      border-radius: 0;
 
       &:before,
       &:after {
@@ -286,16 +289,17 @@ _portal {
         width: 8px;
         height: 40px;
         background: url($rightButtonReply) center/auto no-repeat;
-        top: 0;
-        bottom: 0;
+        top: -1px;
+        bottom: -1px;
       }
 
       &:before {
-        left: 0;
+        left: -8px;
       }
 
       &:after {
-        right: 0;
+        right: -8px;
+        transform: scale(-1, 1)
       }
     }
   }
