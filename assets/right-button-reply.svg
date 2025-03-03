@@ -1,0 +1,21 @@
+<svg width="8" height="40" viewBox="0 0 8 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Right" clip-path="url(#clip0_9734_56124)">
+<foreignObject x="-3" y="-3" width="15" height="46">
+</foreignObject>
+    <path id="Vector 27" d="M8.5 39.5V0.5H5.20711L0.5 5.20711V10V20V34.7929L5.20711 39.5H8.5Z" fill="url(#paint0_linear_9734_56124)" fill-opacity="0.15" stroke="url(#paint1_linear_9734_56124)"/>
+</g>
+<defs>
+<clipPath id="bgblur_1_9734_56124_clip_path" transform="translate(3 3)"><path d="M8.5 39.5V0.5H5.20711L0.5 5.20711V10V20V34.7929L5.20711 39.5H8.5Z"/>
+</clipPath><linearGradient id="paint0_linear_9734_56124" x1="5" y1="40" x2="5" y2="0" gradientUnits="userSpaceOnUse">
+<stop stop-color="#B7954D"/>
+<stop offset="1" stop-color="#C9BC92"/>
+</linearGradient>
+<linearGradient id="paint1_linear_9734_56124" x1="112.999" y1="40" x2="112.999" y2="0" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8F6616"/>
+<stop offset="1" stop-color="#F9DF94"/>
+</linearGradient>
+<clipPath id="clip0_9734_56124">
+<rect width="8" height="40" fill="white" transform="matrix(-1 0 0 1 8 0)"/>
+</clipPath>
+</defs>
+</svg>

@@ -265,4 +265,38 @@ _portal {
   .post-notice.old {
     border-top: none;
   }
+
+  #reply-control .save-or-cancel {
+    justify-content: flex-end;
+    width: 100%;
+
+    button {
+      position: relative;
+      border-top: 1px solid #F9DF94;
+      border-bottom: 1px solid #F9DF94;
+      background: linear-gradient(180deg, rgba(201, 188, 146, 0.15) 0%, rgba(183, 149, 77, 0.15) 100%);
+      backdrop-filter: blur(1.5px);
+      margin-inline: 8px;
+      padding-inline: 8px;
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 40px;
+        background: url($rightButtonReply) center/auto no-repeat;
+        top: 0;
+        bottom: 0;
+      }
+
+      &:before {
+        left: 0;
+      }
+
+      &:after {
+        right: 0;
+      }
+    }
+  }
 }

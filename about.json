@@ -37,7 +37,8 @@
     "orbitalsBg": "assets/orbitals.png",
     "bgPattern": "assets/bg-pattern.png",
     "iconCategory": "assets/icon-subtitle.png",
-    "iconTitle": "assets/left-arrow-title.svg"
+    "iconTitle": "assets/left-arrow-title.svg",
+    "rightButtonReply": "assets/right-button-reply.svg"
   },
   "color_schemes": {
     "BS_Color": {
