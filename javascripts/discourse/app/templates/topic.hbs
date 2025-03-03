@@ -257,10 +257,7 @@
                         </span>
 
                         {{#unless this.model.postStream.loadingFilter}}
-<!--                            arr.slice(1, arr.length) -->
-<!--                            .slice(0, 1) -->
                         <div class="onlyMainPost">
-
                             <ScrollingPostStream
                                     @mainPost={{true}}
                                     @posts={{this.postsToRender}}
@@ -312,11 +309,9 @@
                             />
                         </div>
 
-<!--                            <CustomComposerContainer />-->
-
-                            <PluginOutlet @name="composer-container">
-                                <ComposerContainer />
-                            </PluginOutlet>
+                        <PluginOutlet @name="composer-container">
+                            <ComposerContainer />
+                        </PluginOutlet>
 
                         <div class="notMainPost">
                             <ScrollingPostStream
