@@ -220,6 +220,7 @@ _portal {
     font-weight: 400;
     line-height: 26px; /* 108.333% */
     margin-bottom: 16px;
+    margin-left: 8px;
     display: inline-flex;
     align-items: baseline;
     gap: 8px;
@@ -239,9 +240,13 @@ _portal {
   }
 
   #reply-control.open {
-    padding: 16px 16px 16px 8px;
+    padding: 8px 16px;
     border-top: 2px solid #776030;
     box-shadow: 0px -2px 10px 0px rgba(25, 38, 60, 0.15);
+  }
+
+  #reply-control .reply-area {
+    padding: 0;
   }
 
   .d-editor-textarea-wrapper {
@@ -269,6 +274,7 @@ _portal {
   #reply-control .save-or-cancel {
     justify-content: flex-end;
     width: 100%;
+    margin-right: 0;
 
     button {
       position: relative;
