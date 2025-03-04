@@ -28,9 +28,6 @@
             @cancelled={{this.composer.cancelled}}
             @save={{this.composer.saveAction}}
     >
-      <div class="custom-comment-control-title">Добавить комментарий
-<!--          <span>(Выберите пост, на который хотите ответить)</span>-->
-      </div>
       {{#if this.composer.visible}}
         {{html-class (if this.composer.isPreviewVisible "composer-has-preview")}}
         <ComposerMessages
@@ -126,6 +123,10 @@
 <!--                      @disableTextarea={{this.composer.disableTextarea}}-->
 <!--              />-->
             </div>
+
+              <div class="custom-comment-control-title">Добавить комментарий
+                  <!--          <span>(Выберите пост, на который хотите ответить)</span>-->
+              </div>
 
             <ComposerEditor>
               <div class="composer-fields">
