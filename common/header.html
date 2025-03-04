@@ -13,12 +13,11 @@
     recentTopicsBtn.innerHTML = newLabel;
   } catch {}
 </script>
-<script
-        type="text/x-handlebars"
-        data-template-name="topic.hbs"
-></script>
+<!--<script-->
+<!--        type="text/x-handlebars"-->
+<!--        data-template-name="topic.hbs"-->
+<!--&gt;</script>-->
 <script type="text/x-handlebars" data-template-name="components/composer-container">
-    if((window.location.href.indexOf('brokensun.com') != -1) {
     <ComposerBody
             @composer={{this.composer.model}}
             @showPreview={{this.composer.isPreviewVisible}}
@@ -437,5 +436,5 @@
         {{/if}}
       {{/if}}
     </ComposerBody>
-    }
+
 </script>
