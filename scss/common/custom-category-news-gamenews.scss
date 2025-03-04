@@ -215,15 +215,17 @@ _portal {
   .custom-comment-control-title {
     color: #FFF;
     font-family: "XXII Centar Regular";
-    font-size: 24px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 26px; /* 108.333% */
+    //line-height: 26px; /* 108.333% */
     margin-bottom: 16px;
     margin-left: 8px;
     display: inline-flex;
     align-items: baseline;
     gap: 8px;
+    line-height: normal;
+    opacity: 0.75;
 
     span {
       opacity: 0.75;
