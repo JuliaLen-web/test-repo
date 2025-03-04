@@ -254,6 +254,16 @@ _portal {
     padding: 0;
   }
 
+  .d-editor-button-bar .btn.no-text.btn-icon.link,
+  .d-editor-button-bar .btn.no-text.btn-icon.blockquote,
+  .d-editor-button-bar .btn.no-text.btn-icon.code,
+  .d-editor-button-bar .btn.no-text.btn-icon.bullet,
+  .d-editor-button-bar .btn.no-text.btn-icon.list,
+  .d-editor-button-bar .btn.no-text.btn-icon.emoji,
+  .d-editor-button-bar .btn.no-text.btn-icon.local-dates {
+    display: none;
+  }
+
   .d-editor-textarea-wrapper {
     box-shadow: none;
     box-sizing: border-box;
@@ -276,11 +286,8 @@ _portal {
     border-top: none;
   }
 
-  #reply-control #draft-status {
-    display: none;
-  }
-
   #reply-control .save-or-cancel {
+    flex-direction: row-reverse;
     justify-content: space-between;
     width: 100%;
     margin-right: 0;
@@ -297,6 +304,10 @@ _portal {
       height: 40px;
       border-inline: none;
       border-radius: 0;
+
+      svg {
+        display: none;
+      }
 
       &:before,
       &:after {
