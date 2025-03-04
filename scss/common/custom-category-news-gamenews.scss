@@ -2,6 +2,16 @@ iframe .category.archetype-regular {
   background: radial-gradient(50vw 45vh at 50vw 50vh, #1F314C 0%, #1A2233 95.28%), url($bgPattern) top/900px repeat;
   background-blend-mode: overlay, normal;
 
+  .d-header-wrap {
+    display: none;
+  }
+
+  #topic-footer-buttons,
+  .more-topics__container,
+  .sidebar-wrapper {
+    display: none;
+  }
+
   .topic-post > article {
     border: none;
   }
@@ -141,6 +151,10 @@ iframe .category.archetype-regular {
         width: 36px;
         background: url($iconTitle) center/36px repeat
       }
+    }
+
+    #topic-title .title-wrapper {
+      flex-direction: column-reverse;
     }
 
     #topic-title .topic-category {
