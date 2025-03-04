@@ -255,7 +255,26 @@
           </span>
 
               <div class="save-or-cancel">
-                <ComposerSaveButton
+                  {{#if this.site.mobileView}}
+                      <DButton
+                              @action={{this.composer.cancel}}
+                              class="cancel btn-transparent"
+                              @icon={{if this.composer.canEdit "xmark" "trash-can"}}
+                              @preventFocus={{true}}
+                              @title="close"
+                      />
+                  {{else}}
+                      <DButton
+                              @action={{this.composer.cancel}}
+                              class="cancel btn-transparent"
+                              @preventFocus={{true}}
+                              @title="close"
+                              @label="close"
+                      />
+                  {{/if}}
+
+
+                  <ComposerSaveButton
                         @action={{this.composer.saveAction}}
                         @icon={{this.composer.saveIcon}}
                         @label={{this.composer.saveLabel}}
@@ -263,23 +282,6 @@
                         @disableSubmit={{this.composer.disableSubmit}}
                 />
 
-                {{#if this.site.mobileView}}
-                  <DButton
-                          @action={{this.composer.cancel}}
-                          class="cancel btn-transparent"
-                          @icon={{if this.composer.canEdit "xmark" "trash-can"}}
-                          @preventFocus={{true}}
-                          @title="close"
-                  />
-                {{else}}
-                  <DButton
-                          @action={{this.composer.cancel}}
-                          class="cancel btn-transparent"
-                          @preventFocus={{true}}
-                          @title="close"
-                          @label="close"
-                  />
-                {{/if}}
 
                 {{#if this.site.mobileView}}
                   {{#if this.composer.whisperOrUnlistTopic}}
@@ -320,27 +322,6 @@
                   </a>
                 {{/if}}
 
-                {{#if this.composer.allowPreview}}
-                  <a
-                          href
-                          class="btn btn-default no-text mobile-preview"
-                          title={{i18n "composer.show_preview"}}
-                    {{on "click" this.composer.togglePreview}}
-                          aria-label={{i18n "composer.show_preview"}}
-                  >
-                    {{d-icon "desktop"}}
-                  </a>
-                {{/if}}
-
-                {{#if this.composer.isPreviewVisible}}
-                  <DButton
-                          @action={{this.composer.togglePreview}}
-                          @title="composer.hide_preview"
-                          @ariaLabel="composer.hide_preview"
-                          @icon="pencil"
-                          class="hide-preview"
-                  />
-                {{/if}}
               {{/if}}
 
               {{#if
