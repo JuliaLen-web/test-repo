@@ -273,7 +273,6 @@
                       />
                   {{/if}}
 
-
                   <ComposerSaveButton
                         @action={{this.composer.saveAction}}
                         @icon={{this.composer.saveIcon}}
@@ -295,12 +294,12 @@
                   {{/if}}
                 {{/if}}
 
-                <span>
-              <PluginOutlet
-                      @name="composer-after-save-or-cancel"
-                      @outletArgs={{hash model=this.composer.model}}
-              />
-            </span>
+<!--                <span>-->
+    <!--              <PluginOutlet-->
+    <!--                      @name="composer-after-save-or-cancel"-->
+    <!--                      @outletArgs={{hash model=this.composer.model}}-->
+    <!--              />-->
+<!--                </span>-->
               </div>
 
               {{#if this.site.mobileView}}

@@ -276,6 +276,10 @@ _portal {
     border-top: none;
   }
 
+  #reply-control #draft-status {
+    display: none;
+  }
+
   #reply-control .save-or-cancel {
     justify-content: space-between;
     width: 100%;
