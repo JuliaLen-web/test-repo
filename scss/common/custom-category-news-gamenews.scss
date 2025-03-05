@@ -194,6 +194,10 @@
     flex-direction: column-reverse;
   }
 
+  #topic-title .badge-category__wrapper .badge-category:before {
+    content: none;
+  }
+
   #topic-title .fancy-title {
     color: #F9DF94;
     text-align: center;
