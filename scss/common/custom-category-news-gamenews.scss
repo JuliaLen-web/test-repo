@@ -1,9 +1,8 @@
-.category.archetype-regular,
-_portal {
+.embedded.category.archetype-regular {
   background: radial-gradient(50vw 45vh at 50vw 50vh, #1F314C 0%, #1A2233 95.28%), url($bgPattern) top/900px repeat;
   background-blend-mode: overlay, normal;
 
-  --composer-height:250px;
+  --composer-height: 250px;
 
   .topic-post > article {
     border: none;
@@ -214,25 +213,41 @@ _portal {
     width: 100%;
   }
 
-  .custom-comment-control-title {
+  &.has-sidebar-page #reply-control:not(.fullscreen).hide-preview {
+    margin: 0;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+
+  .post-notice {
+    margin-inline: auto;
+    margin-top: 8px;
+  }
+
+  .post-notice.old {
+    border-top: none;
+  }
+}
+
+.category.archetype-regular {
+
+  #reply-control .reply-to .composer-action-title .action-title {
     color: #FFF;
     font-family: "XXII Centar Regular";
-    font-size: 12px;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
-    //line-height: 26px; /* 108.333% */
-    margin-bottom: 16px;
-    display: inline-flex;
-    align-items: baseline;
-    gap: 8px;
-    line-height: normal;
-    opacity: 0.75;
+    line-height: 26px; /* 108.333% */
+  }
 
-    span {
-      opacity: 0.75;
-      font-size: 12px;
-      line-height: normal;
-    }
+  .custom-comment-control-title {
+    font-family: "XXII Centar Regular";
+    margin-bottom: 16px;
+    color: #BFC1C4;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 130% */
   }
 
   #reply-control {
@@ -276,21 +291,6 @@ _portal {
     box-sizing: border-box;
     border: 1px solid #1E2533;
     background: rgba(0, 0, 0, 0.24);
-  }
-
-  &.has-sidebar-page #reply-control:not(.fullscreen).hide-preview {
-    margin: 0;
-    transform: translateX(-50%);
-    left: 50%;
-  }
-
-  .post-notice {
-    margin-inline: auto;
-    margin-top: 8px;
-  }
-
-  .post-notice.old {
-    border-top: none;
   }
 
   #reply-control .save-or-cancel {
