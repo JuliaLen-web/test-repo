@@ -219,17 +219,6 @@
   #reply-control.hide-preview {
     max-width: 960px;
   }
-
-  .d-editor-button-bar .btn.no-text.btn-icon.link,
-  .d-editor-button-bar .btn.no-text.btn-icon.blockquote,
-  .d-editor-button-bar .btn.no-text.btn-icon.code,
-  .d-editor-button-bar .btn.no-text.btn-icon.upload,
-  .d-editor-button-bar .btn.no-text.btn-icon.bullet,
-  .d-editor-button-bar .btn.no-text.btn-icon.list,
-  .d-editor-button-bar .btn.no-text.btn-icon.emoji,
-  .d-editor-button-bar .btn.no-text.btn-icon.local-dates {
-    display: none;
-  }
 }
 
 .category.archetype-regular {
@@ -414,15 +403,21 @@
     }
   }
 }
+
+.embedded.category.archetype-regular,
 .category.category-news-gamenews {
   .d-editor-button-bar .btn.no-text.btn-icon.link,
   .d-editor-button-bar .btn.no-text.btn-icon.blockquote,
   .d-editor-button-bar .btn.no-text.btn-icon.code,
-    .d-editor-button-bar .btn.no-text.btn-icon.upload,
+  .d-editor-button-bar .btn.no-text.btn-icon.upload,
   .d-editor-button-bar .btn.no-text.btn-icon.bullet,
   .d-editor-button-bar .btn.no-text.btn-icon.list,
   .d-editor-button-bar .btn.no-text.btn-icon.emoji,
   .d-editor-button-bar .btn.no-text.btn-icon.local-dates {
+    display: none;
+  }
+  #reply-control .btn-mini-toggle,
+  #reply-control .grippie {
     display: none;
   }
 }
