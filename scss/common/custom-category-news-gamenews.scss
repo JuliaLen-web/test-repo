@@ -361,5 +361,20 @@
         transform: scale(-1, 1)
       }
     }
+
+    .btn.cancel {
+      background: none;
+      border: none;
+      text-align: center;
+
+      span {
+        font-family: "XXII Centar Regular";
+        color: #B19F63;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 100% */
+      }
+    }
   }
 }
