@@ -8,6 +8,37 @@
     display: none;
   }
 
+  #topic-title .topic-category {
+    margin-bottom: 20px;
+    position: relative;
+    box-sizing: border-box;
+    gap: 8px;
+
+    .badge-category__wrapper {
+      display: none;
+    }
+
+    &:after {
+      content: 'Broken Sun';
+      position: relative;
+      color: #B19F63;
+      font-family: "Albertusnova Thin";
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+
+    &:before {
+      content: '';
+      position: relative;
+      left: 0;
+      height: 24px;
+      width: 24px;
+      background: url($iconCategory) center/24px repeat
+    }
+  }
+
   #topic-footer-buttons,
   .more-topics__container,
   .sidebar-wrapper,
