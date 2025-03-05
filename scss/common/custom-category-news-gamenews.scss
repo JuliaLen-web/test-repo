@@ -224,12 +224,6 @@
     width: 100%;
   }
 
-  &.has-sidebar-page #reply-control:not(.fullscreen).hide-preview {
-    margin: 0;
-    transform: translateX(-50%);
-    left: 50%;
-  }
-
   .post-notice {
     margin-inline: auto;
     margin-top: 8px;
@@ -238,9 +232,20 @@
   .post-notice.old {
     border-top: none;
   }
+
+  &.has-sidebar-page #reply-control:not(.fullscreen).hide-preview {
+    max-width: 960px;
+  }
 }
 
 .category.archetype-regular {
+  &.has-sidebar-page #reply-control:not(.fullscreen).hide-preview {
+    margin: 0;
+    transform: translateX(-50%);
+    left: 50%;
+    max-width: 1110px;
+    width: 100%;
+  }
 
   #reply-control .reply-to .composer-action-title .action-title {
     color: #FFF;
@@ -311,7 +316,7 @@
     margin-right: 0;
     gap: 8px;
 
-    button {
+    .btn.create {
       position: relative;
       border-top: 1px solid #F9DF94;
       border-bottom: 1px solid #8F6616;
