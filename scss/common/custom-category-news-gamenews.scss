@@ -183,6 +183,7 @@
     border-top: none;
   }
 
+  &.has-sidebar-page#reply-control.hide-preview,
   #reply-control.hide-preview {
     max-width: 960px;
   }
@@ -251,7 +252,7 @@
     width: 100%;
   }
 
-  #reply-control:not(.fullscreen).hide-preview {
+  &.has-sidebar-page#reply-control.hide-preview {
     max-width: 820px;
   }
 
