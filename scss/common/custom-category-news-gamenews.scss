@@ -343,12 +343,21 @@
     background: rgba(0, 0, 0, 0.24);
   }
 
+  #reply-control .btn-mini-toggle,
+  #reply-control .grippie {
+    display: none;
+  }
+
   #reply-control .save-or-cancel {
     flex-direction: row-reverse;
     justify-content: space-between;
     width: 100%;
     margin-right: 0;
     gap: 8px;
+
+    &>span {
+      display: none;
+    }
 
     .btn.create {
       position: relative;
@@ -414,10 +423,6 @@
   .d-editor-button-bar .btn.no-text.btn-icon.list,
   .d-editor-button-bar .btn.no-text.btn-icon.emoji,
   .d-editor-button-bar .btn.no-text.btn-icon.local-dates {
-    display: none;
-  }
-  #reply-control .btn-mini-toggle,
-  #reply-control .grippie {
     display: none;
   }
 }
