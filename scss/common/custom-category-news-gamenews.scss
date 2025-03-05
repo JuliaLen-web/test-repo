@@ -233,18 +233,22 @@
     border-top: none;
   }
 
-  &.has-sidebar-page #reply-control:not(.fullscreen).hide-preview {
+  &.has-sidebar-page #reply-control {
     max-width: 960px;
   }
 }
 
 .category.archetype-regular {
-  &.has-sidebar-page #reply-control:not(.fullscreen).hide-preview {
+  &.has-sidebar-page #reply-control.fullscreen {
     margin: 0;
     transform: translateX(-50%);
     left: 50%;
     max-width: 1110px;
     width: 100%;
+  }
+
+  &.has-sidebar-page #reply-control:not(.fullscreen){
+    max-width:840px;
   }
 
   #reply-control .reply-to .composer-action-title .action-title {
