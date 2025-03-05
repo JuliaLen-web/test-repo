@@ -233,13 +233,13 @@
     border-top: none;
   }
 
-  &.has-sidebar-page #reply-control {
+  &.has-sidebar-page #reply-control.hide-preview {
     max-width: 960px;
   }
 }
 
 .category.archetype-regular {
-  &.has-sidebar-page #reply-control.fullscreen {
+  &.has-sidebar-page #reply-control.fullscreen.hide-preview {
     margin: 0;
     transform: translateX(-50%);
     left: 50%;
@@ -247,7 +247,7 @@
     width: 100%;
   }
 
-  &.has-sidebar-page #reply-control:not(.fullscreen){
+  &.has-sidebar-page #reply-control:not(.fullscreen).hide-preview{
     max-width:840px;
   }
 
