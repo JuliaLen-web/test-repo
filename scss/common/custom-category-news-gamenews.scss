@@ -2,8 +2,42 @@
   background: radial-gradient(50vw 45vh at 50vw 50vh, #1F314C 0%, #1A2233 95.28%), url($bgPattern) top/900px repeat;
   background-blend-mode: overlay, normal;
 
+  --composer-height: 250px;
+
   .d-header-wrap {
     display: none;
+  }
+
+  #topic-title .topic-category {
+    margin-bottom: 20px;
+    position: relative;
+    box-sizing: border-box;
+    gap: 4px;
+    padding-left: 0;
+
+    .badge-category__wrapper {
+      display: none;
+    }
+
+    &:after {
+      content: 'Broken Sun';
+      position: relative;
+      color: #B19F63;
+      font-family: "Albertusnova Thin";
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+
+    &:before {
+      content: '';
+      position: relative;
+      left: 0;
+      height: 24px;
+      width: 24px;
+      background: url($iconCategory) center/24px repeat
+    }
   }
 
   #topic-footer-buttons,
@@ -36,7 +70,6 @@
       max-width: 960px;
       padding-top: 4.4rem;
       padding-bottom: 8rem;
-
     }
 
     .container.posts {
@@ -130,66 +163,6 @@
       width: 100%;
     }
 
-    #topic-title .fancy-title {
-      color: #F9DF94;
-      text-align: center;
-      font-family: "Albertusnova Thin";
-      font-size: 25px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 112%;
-      letter-spacing: 0.75px;
-      text-transform: uppercase;
-      position: relative;
-      padding-left: 46px;
-      box-sizing: border-box;
-
-      &:before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 36px;
-        width: 36px;
-        background: url($iconTitle) center/36px repeat
-      }
-    }
-
-    #topic-title .title-wrapper {
-      flex-direction: column-reverse;
-    }
-
-    #topic-title .topic-category {
-      margin-bottom: 20px;
-      position: relative;
-      box-sizing: border-box;
-      gap: 8px;
-
-      .badge-category__wrapper {
-        display: none;
-      }
-
-      &:after {
-        content: 'Broken Sun';
-        position: relative;
-        color: #B19F63;
-        font-family: "Albertusnova Thin";
-        font-size: 22px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
-      }
-
-      &:before {
-        content: '';
-        position: relative;
-        left: 0;
-        height: 24px;
-        width: 24px;
-        background: url($iconCategory) center/24px repeat
-      }
-    }
-
     .topic-map {
       display: none !important;
     }
@@ -233,24 +206,109 @@
     width: 100%;
   }
 
-  .custom-comment-control-title {
+  .post-notice {
+    margin-inline: auto;
+    margin-top: 8px;
+  }
+
+  .post-notice.old {
+    border-top: none;
+  }
+
+  &.has-sidebar-page #reply-control.hide-preview,
+  #reply-control.hide-preview {
+    max-width: 960px;
+  }
+}
+
+.category.archetype-regular {
+  #topic-title .title-wrapper {
+    flex-direction: column-reverse;
+  }
+
+  #topic-title .badge-category__wrapper .badge-category:before {
+    content: none;
+  }
+
+  #topic-title .fancy-title {
+    color: #F9DF94;
+    text-align: center;
+    font-family: "Albertusnova Thin";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 112%;
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 46px;
+    box-sizing: border-box;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      height: 36px;
+      width: 36px;
+      background: url($iconTitle) center/36px repeat
+    }
+  }
+
+  #topic-title .topic-category {
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 34px;
+    box-sizing: border-box;
+
+    span {
+      color: #B19F63;
+      font-family: "Albertusnova Thin";
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      flex-direction: row-reverse;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      height: 24px;
+      width: 24px;
+      background: url($iconCategory) center/24px repeat
+    }
+  }
+
+  #reply-control.hide-preview {
+    margin: 0;
+    transform: translateX(-50%);
+    left: 50%;
+    max-width: 1110px;
+    width: 100%;
+  }
+
+  &.has-sidebar-page #reply-control.hide-preview {
+    max-width: 820px;
+  }
+
+  #reply-control .reply-to .composer-action-title .action-title {
     color: #FFF;
     font-family: "XXII Centar Regular";
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: 26px; /* 108.333% */
-    margin-bottom: 16px;
-    margin-left: 8px;
-    display: inline-flex;
-    align-items: baseline;
-    gap: 8px;
+  }
 
-    span {
-      opacity: 0.75;
-      font-size: 12px;
-      line-height: normal;
-    }
+  .custom-comment-control-title {
+    font-family: "XXII Centar Regular";
+    margin-bottom: 16px;
+    color: #BFC1C4;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 130% */
   }
 
   #reply-control {
@@ -258,14 +316,10 @@
     border: none;
     box-sizing: border-box;
     background: radial-gradient(62.11% 100% at 50% 0%, #121B2E 0%, #0B1321 90.72%);
-  }
 
-  #reply-control .grippie {
-    display: none;
-  }
-
-  #reply-control .toggle-preview {
-    display: none !important;
+    .select-kit.single-select.dropdown-select-box {
+      display: none;
+    }
   }
 
   #reply-control.open {
@@ -278,6 +332,10 @@
     padding: 0;
   }
 
+  #reply-control .reply-area .submit-panel>span{
+    display: none;
+  }
+
   .d-editor-textarea-wrapper {
     box-shadow: none;
     box-sizing: border-box;
@@ -285,28 +343,22 @@
     background: rgba(0, 0, 0, 0.24);
   }
 
-  &.has-sidebar-page #reply-control:not(.fullscreen).hide-preview {
-    margin: 0;
-    transform: translateX(-50%);
-    left: 50%;
-  }
-
-  .post-notice {
-    margin-inline: auto;
-    margin-top: 8px;
-  }
-
-  .post-notice.old {
-    border-top: none;
+  #reply-control .btn-mini-toggle,
+  #reply-control .grippie {
+    display: none;
   }
 
   #reply-control .save-or-cancel {
-    justify-content: flex-end;
+    justify-content: space-between;
     width: 100%;
     margin-right: 0;
     gap: 8px;
 
-    button {
+    &>span {
+      display: none;
+    }
+
+    .btn.create {
       position: relative;
       border-top: 1px solid #F9DF94;
       border-bottom: 1px solid #8F6616;
@@ -317,6 +369,10 @@
       height: 40px;
       border-inline: none;
       border-radius: 0;
+
+      svg {
+        display: none;
+      }
 
       &:before,
       &:after {
@@ -338,5 +394,34 @@
         transform: scale(-1, 1)
       }
     }
+
+    .btn.cancel {
+      background: none;
+      border: none;
+      text-align: center;
+
+      span {
+        font-family: "XXII Centar Regular";
+        color: #B19F63;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 100% */
+      }
+    }
+  }
+}
+
+.embedded.category.archetype-regular,
+.category.category-news-gamenews {
+  .d-editor-button-bar .btn.no-text.btn-icon.link,
+  .d-editor-button-bar .btn.no-text.btn-icon.blockquote,
+  .d-editor-button-bar .btn.no-text.btn-icon.code,
+  .d-editor-button-bar .btn.no-text.btn-icon.upload,
+  .d-editor-button-bar .btn.no-text.btn-icon.bullet,
+  .d-editor-button-bar .btn.no-text.btn-icon.list,
+  .d-editor-button-bar .btn.no-text.btn-icon.emoji,
+  .d-editor-button-bar .btn.no-text.btn-icon.local-dates {
+    display: none;
   }
 }
