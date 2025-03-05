@@ -4,6 +4,17 @@
 
   --composer-height: 250px;
 
+  .d-header-wrap {
+    display: none;
+  }
+
+  #topic-footer-buttons,
+  .more-topics__container,
+  .sidebar-wrapper,
+  .container.posts .topic-navigation {
+    display: none;
+  }
+
   .topic-post > article {
     border: none;
   }
