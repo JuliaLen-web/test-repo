@@ -4,6 +4,8 @@
 
 [data-wrap="flexRow"] {
   display: flex;
+  gap: 20px;
+
   &>* {
     flex: 1;
   }
