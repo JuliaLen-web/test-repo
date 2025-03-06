@@ -343,9 +343,18 @@
     background: rgba(0, 0, 0, 0.24);
   }
 
-  #reply-control .btn-mini-toggle,
-  #reply-control .grippie {
+  #reply-control .btn-mini-toggle {
     display: none;
+  }
+
+  #reply-control .grippie {
+    opacity: 0.7;
+    transition: opacity .3s ease;
+  }
+
+  #reply-control .grippie:hover {
+    opacity: 1;
+    transition: opacity .3s ease;
   }
 
   #reply-control .save-or-cancel {
