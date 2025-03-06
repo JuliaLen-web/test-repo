@@ -15,7 +15,11 @@
   }
 }
 
-[data-wrap="img-4/1"] {
+[data-wrap="imgH"] {
   aspect-ratio: 4 / 1;
   object-fit: cover;
+
+  @media screen and (max-width: 767px) {
+    aspect-ratio: 2 / 1;
+  }
 }
