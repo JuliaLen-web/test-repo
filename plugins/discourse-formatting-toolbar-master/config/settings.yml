@@ -1,4 +1,0 @@
-plugins:
-  formattingtlb_enabled:
-    default: true
-    client: true
