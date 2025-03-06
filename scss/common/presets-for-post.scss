@@ -16,8 +16,12 @@
 }
 
 [data-wrap="imgH"] {
+  .lightbox-wrapper, .lightbox-wrapper * {
+    width: 100%;
+  }
+
   img {
-    aspect-ratio: 4 / 1;
+    aspect-ratio: 4 / 1 !important;
     object-fit: cover;
 
     @media screen and (max-width: 767px) {
