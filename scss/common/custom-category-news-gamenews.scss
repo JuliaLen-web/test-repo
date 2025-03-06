@@ -280,20 +280,6 @@
     }
   }
 
-  #reply-control,
-  #reply-control.hide-preview {
-    margin: 0;
-    transform: translateX(-50%);
-    left: 50%;
-    max-width: 1110px;
-    width: 100%;
-  }
-
-  &.has-sidebar-page #reply-control.hide-preview,
-  &.has-sidebar-page #reply-control {
-    max-width: 820px;
-  }
-
   #reply-control .reply-to .composer-action-title .action-title {
     color: #FFF;
     font-family: "XXII Centar Regular";
@@ -320,10 +306,6 @@
     background: radial-gradient(62.11% 100% at 50% 0%, #121B2E 0%, #0B1321 90.72%);
 
     .select-kit.single-select.dropdown-select-box {
-      display: none;
-    }
-
-    .d-editor-preview-wrapper {
       display: none;
     }
 
@@ -429,6 +411,25 @@
         font-weight: 400;
         line-height: 20px; /* 100% */
       }
+    }
+  }
+  &:not(.topic-status-unlisted) {
+    .d-editor-preview-wrapper {
+      display: none;
+    }
+
+    #reply-control,
+    #reply-control.hide-preview {
+      margin: 0;
+      transform: translateX(-50%);
+      left: 50%;
+      max-width: 1110px;
+      width: 100%;
+    }
+
+    &.has-sidebar-page #reply-control.hide-preview,
+    &.has-sidebar-page #reply-control {
+      max-width: 820px;
     }
   }
 }
