@@ -222,6 +222,11 @@
 }
 
 .category.archetype-regular {
+  h1, h2, h3, h4, h5, h6 {
+    color: #B19F63;
+    font-family: "Albertusnova Thin";
+  }
+
   #topic-title .title-wrapper {
     flex-direction: column-reverse;
   }
