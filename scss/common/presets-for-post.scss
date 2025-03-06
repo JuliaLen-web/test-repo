@@ -1,0 +1,10 @@
+[data-wrap="blue"] {
+  background: #1EA9FF;
+}
+
+[data-wrap="flexRow"] {
+  display: flex;
+  &>* {
+    flex: 1;
+  }
+}
