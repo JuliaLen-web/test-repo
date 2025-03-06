@@ -227,6 +227,10 @@
     font-family: "Albertusnova Thin";
   }
 
+  p:empty {
+    display: none;
+  }
+
   #topic-title .title-wrapper {
     flex-direction: column-reverse;
   }
