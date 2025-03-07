@@ -74,6 +74,7 @@
 }
 
 [data-wrap="tooltipHover"] {
+  pointer-events: none;
   position: absolute;
   transform: translateY(-100%);
   top: -12px;
@@ -85,8 +86,8 @@
   background: #0B1D2D;
 
   img {
-    width: 80px;
-    height: 80px;
+    width: 80px !important;
+    height: 80px !important;
     object-fit: contain !important;
   }
 }
