@@ -39,7 +39,9 @@
     "iconCategory": "assets/icon-subtitle.png",
     "iconTitle": "assets/left-arrow-title.svg",
     "rightButtonReply": "assets/right-button-reply.svg",
-    "tooltipArrow": "assets/tooltipArrow.png"
+    "tooltipArrow": "assets/tooltipArrow.png",
+    "tooltipHeaderLeft": "assets/tooltipHeaderLeft.svg",
+    "separator": "assets/separator.svg"
   },
   "color_schemes": {
     "BS_Color": {
