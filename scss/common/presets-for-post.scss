@@ -29,3 +29,39 @@
     }
   }
 }
+
+[data-wrap="tooltipWrap"] {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 5px;
+}
+
+[data-wrap="tooltipItem"] {
+  aspect-ratio: 1 / 1;
+  width: calc(100%/5 - 5px*4/5);
+}
+
+[data-wrap="tooltipItem-2"] {
+  aspect-ratio: 2 / 1;
+  width: calc(100%/5 * 2 - 5px*3/4);
+}
+
+[data-wrap="tooltipItem"],
+[data-wrap="tooltipItem-2"] {
+  position: relative;
+  background: #cccccc;
+
+  &:hover [data-wrap="tooltipHover"] {
+    opacity: 1;
+  }
+}
+
+[data-wrap="tooltipHover"] {
+  position: absolute;
+  opacity: 0;
+  width: 250px;
+  height: 250px;
+  border-inline: 1px solid #847445;
+  background: #0B1D2D;
+}
