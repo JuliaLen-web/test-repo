@@ -45,7 +45,16 @@
 
   [data-wrap="article"] [data-wrap="tooltipWrap"] {
     max-width: 720px;
-  }
+    gap: 26px;
+
+      [data-wrap="tooltipItem"] {
+        width: calc(100% / 5 - 26px * 4 / 5);
+      }
+
+      [data-wrap="tooltipItem-2"] {
+        width: calc(100% / 5 * 2 - 26px * 3 / 4);
+      }
+    }
 
   [data-wrap="tooltipItem"] {
     aspect-ratio: 1 / 1;
