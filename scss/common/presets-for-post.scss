@@ -166,7 +166,11 @@
       margin: 0;
       width: 100%;
 
-      span {
+      br {
+        display: none;
+      }
+
+      &:last-of-type {
         color: #B8A672;
         text-align: center;
         font-family: "Albertusnova Thin";
