@@ -187,6 +187,10 @@
         letter-spacing: 0.12px;
       }
     }
+
+    [data-wrap="separator"] {
+      background: url($separator) no-repeat center/contain;
+    }
   }
 
   [data-wrap="tooltipContent"] {
@@ -240,7 +244,7 @@
   [data-wrap="separator"] {
     display: block;
     width: 100%;
-    height: 10px;
-    background: url($separator) no-repeat center/contain;
+    height: 14px;
+    background: url($separatorBig) no-repeat center/contain;
   }
 }
