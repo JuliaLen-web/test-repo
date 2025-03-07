@@ -70,20 +70,7 @@
     display: none;
   }
 
-  &:before {
-    content: '';
-    position: absolute;
-    top: -20px;
-    left: 20px;
-    width: 68px;
-    height: 30px;
-    background: url($tooltipArrow) no-repeat center/contain;
-    z-index: 11;
-    opacity: 0;
-  }
-
-  &:hover [data-wrap="tooltipHover"],
-  &:hover:before {
+  &:hover [data-wrap="tooltipHover"]{
     opacity: 1;
   }
 }
@@ -124,7 +111,6 @@
     left: 0;
     right: 0;
     bottom: 0;
-    clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0 calc(100% - 6px), 0 6px);
   }
 
   &:before {
@@ -135,13 +121,17 @@
 
     border-image: url($articleTooltip) 10 fill / 10px;
     border-style: solid;
+    clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0 calc(100% - 6px), 0 6px);
+    background: #0B1D2D;
+
   }
 
   &:after {
     //background: #847445;
     z-index: -2;
 
-    background: #0B1D2D;
+    background: url($tooltipArrow) no-repeat 20px 20px/68px 30px;
+
   }
 }
 
