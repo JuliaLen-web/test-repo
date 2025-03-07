@@ -108,14 +108,14 @@
   }
 
   &:before {
-    background: #0B1D2D, url($tooltipArrow) no-repeat bottom/68px 30px;
-    z-index: 1;
+    box-sizing: border-box;
+    padding: 1px;
+    background: #0B1D2D url($tooltipArrow) no-repeat bottom/68px 30px;
+    z-index: 2;
   }
 
   &:after {
-    box-sizing: border-box;
-    padding: 1px;
     background: #847445;
-    z-index: 2;
+    z-index: 1;
   }
 }
