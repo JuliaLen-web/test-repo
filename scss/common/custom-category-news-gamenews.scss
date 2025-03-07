@@ -236,6 +236,10 @@
     display: none;
   }
 
+  .topic-body .cooked {
+    overflow: visible;
+  }
+
   #topic-title .title-wrapper {
     flex-direction: column-reverse;
   }
