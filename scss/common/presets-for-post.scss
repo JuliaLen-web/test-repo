@@ -47,14 +47,14 @@
     max-width: 720px;
     gap: 26px;
 
-      [data-wrap="tooltipItem"] {
-        width: calc(100% / 5 - 26px * 4 / 5);
-      }
-
-      [data-wrap="tooltipItem-2"] {
-        width: calc(100% / 5 * 2 - 26px * 3 / 4);
-      }
+    [data-wrap="tooltipItem"] {
+      width: calc(100% / 5 - 26px * 4 / 5);
     }
+
+    [data-wrap="tooltipItem-2"] {
+      width: calc(100% / 5 * 2 - 26px * 3 / 4);
+    }
+  }
 
   [data-wrap="tooltipItem"] {
     aspect-ratio: 1 / 1;
@@ -108,6 +108,13 @@
 
     [data-wrap="flexRow"] {
       gap: 4px;
+
+      [data-wrap="tooltipHeader"] {
+        p img {
+          height: 25px;
+          width: 22px;
+        }
+      }
 
       & > * {
         flex: none;
