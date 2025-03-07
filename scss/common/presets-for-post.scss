@@ -10,7 +10,7 @@
     margin: 0 0 30px;
   }
 
-  &>* {
+  & > * {
     flex: 1;
   }
 }
@@ -42,7 +42,7 @@
 
 [data-wrap="tooltipItem"] {
   aspect-ratio: 1 / 1;
-  width: calc(100%/5 - 5px*4/5);
+  width: calc(100% / 5 - 5px * 4 / 5);
 
   img {
     aspect-ratio: 1 / 1 !important;
@@ -51,7 +51,7 @@
 
 [data-wrap="tooltipItem-2"] {
   aspect-ratio: 2 / 1;
-  width: calc(100%/5 * 2 - 5px*3/4);
+  width: calc(100% / 5 * 2 - 5px * 3 / 4);
 
   img {
     aspect-ratio: 2 / 1 !important;
@@ -62,7 +62,7 @@
 [data-wrap="tooltipItem-2"] {
   position: relative;
 
-  &>.lightbox-wrapper, &>.lightbox-wrapper * {
+  & > .lightbox-wrapper, & > .lightbox-wrapper * {
     line-height: 0;
   }
 
@@ -86,7 +86,7 @@
   height: 250px;
   z-index: 10;
 
-
+  background: url($tooltipArrow) no-repeat 20px calc(100% + 15px)/68px 30px;
   box-sizing: border-box;
   padding: 8px;
 
@@ -110,7 +110,7 @@
   &:before {
     box-sizing: border-box;
     padding: 1px;
-    background: #0B1D2D url($tooltipArrow) no-repeat bottom/68px 30px;
+    background: #0B1D2D;
     z-index: 2;
   }
 
