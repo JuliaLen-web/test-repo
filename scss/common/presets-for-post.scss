@@ -243,11 +243,11 @@
     }
   }
 
-  [data-wrap="rarity"] {
-    .d-editor-preview .image-wrapper {
-      --resizer-height: none;
-    }
+  .d-editor-preview .image-wrapper {
+    --resizer-height: none;
+  }
 
+  [data-wrap="rarity"] {
     p {
       display: flex;
       padding: 4px;
