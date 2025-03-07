@@ -247,4 +247,40 @@
     height: 14px;
     background: url($separatorBig) no-repeat center/contain;
   }
+
+  [data-wrap="linksContent"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+
+    span {
+      color: #F9DF94;
+      text-align: center;
+      font-family: "Albertusnova Thin";
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 30px; /* 115.385% */
+      letter-spacing: 1.04px;
+    }
+  }
+
+  [data-wrap="linksContentWrap"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    a {
+      color: #1EA9FF;
+      text-align: center;
+      font-family: "XXII Centar Regular";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px; /* 120% */
+      letter-spacing: 0.8px;
+    }
+  }
 }
