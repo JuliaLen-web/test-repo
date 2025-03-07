@@ -23,6 +23,7 @@
   img {
     aspect-ratio: 4 / 1 !important;
     object-fit: cover;
+    object-position: center;
 
     @media screen and (max-width: 767px) {
       aspect-ratio: 2 / 1;
@@ -51,6 +52,14 @@
 [data-wrap="tooltipItem-2"] {
   position: relative;
   background: #cccccc;
+
+  &>.lightbox-wrapper, &>.lightbox-wrapper * {
+    line-height: 0;
+  }
+
+  .meta {
+    display: none;
+  }
 
   &:hover [data-wrap="tooltipHover"] {
     opacity: 1;
