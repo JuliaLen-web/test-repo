@@ -1,214 +1,217 @@
-[data-wrap="blue"] {
-  color: #1EA9FF;
-}
-
-[data-wrap="flexRow"] {
-  display: flex;
-  gap: 20px;
-
-  p {
-    margin: 0 0 30px;
+.category.archetype-regular,
+.embedded.category.archetype-regular {
+  [data-wrap="blue"] {
+    color: #1EA9FF;
   }
-
-  & > * {
-    flex: 1;
-  }
-}
-
-[data-wrap="imgH"] {
-  .lightbox-wrapper, .lightbox-wrapper * {
-    width: 100%;
-  }
-
-  img {
-    aspect-ratio: 4 / 1 !important;
-    object-fit: cover;
-    object-position: center;
-
-    @media screen and (max-width: 767px) {
-      aspect-ratio: 2 / 1;
-    }
-  }
-}
-
-[data-wrap="tooltipWrap"] {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  margin-inline: auto;
-  gap: 5px;
-  max-width: 634px;
-}
-
-[data-wrap="tooltipItem"] {
-  aspect-ratio: 1 / 1;
-  width: calc(100% / 5 - 5px * 4 / 5);
-
-  img {
-    aspect-ratio: 1 / 1 !important;
-  }
-}
-
-[data-wrap="tooltipItem-2"] {
-  aspect-ratio: 2 / 1;
-  width: calc(100% / 5 * 2 - 5px * 3 / 4);
-
-  img {
-    aspect-ratio: 2 / 1 !important;
-  }
-}
-
-[data-wrap="tooltipItem"],
-[data-wrap="tooltipItem-2"] {
-  position: relative;
-
-  & > .lightbox-wrapper, & > .lightbox-wrapper * {
-    line-height: normal;
-  }
-
-  .meta {
-    display: none;
-  }
-
-  &:hover [data-wrap="tooltipHover"]{
-    opacity: 1;
-  }
-}
-
-[data-wrap="tooltipHover"] {
-  pointer-events: none;
-  position: absolute;
-  transform: translateY(-100%);
-  top: -12px;
-  left: -18px;
-  opacity: 0;
-  width: 250px;
-  //height: 250px;
-  z-index: 10;
-
-  box-sizing: border-box;
-  padding: 8px;
 
   [data-wrap="flexRow"] {
-    gap: 4px;
+    display: flex;
+    gap: 20px;
+
+    p {
+      margin: 0 0 30px;
+    }
 
     & > * {
-      flex: none;
+      flex: 1;
+    }
+  }
+
+  [data-wrap="imgH"] {
+    .lightbox-wrapper, .lightbox-wrapper * {
+      width: 100%;
     }
 
-    [data-wrap="tooltipHeader"] {
-      flex: auto;
+    img {
+      aspect-ratio: 4 / 1 !important;
+      object-fit: cover;
+      object-position: center;
+
+      @media screen and (max-width: 767px) {
+        aspect-ratio: 2 / 1;
+      }
     }
+  }
+
+  [data-wrap="tooltipWrap"] {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-inline: auto;
+    gap: 5px;
+    max-width: 634px;
+  }
+
+  [data-wrap="tooltipItem"] {
+    aspect-ratio: 1 / 1;
+    width: calc(100% / 5 - 5px * 4 / 5);
+
+    img {
+      aspect-ratio: 1 / 1 !important;
+    }
+  }
+
+  [data-wrap="tooltipItem-2"] {
+    aspect-ratio: 2 / 1;
+    width: calc(100% / 5 * 2 - 5px * 3 / 4);
+
+    img {
+      aspect-ratio: 2 / 1 !important;
+    }
+  }
+
+  [data-wrap="tooltipItem"],
+  [data-wrap="tooltipItem-2"] {
+    position: relative;
 
     & > .lightbox-wrapper, & > .lightbox-wrapper * {
-      width: auto !important;
+      line-height: normal;
+    }
+
+    .meta {
+      display: none;
+    }
+
+    &:hover [data-wrap="tooltipHover"] {
+      opacity: 1;
     }
   }
 
-  img {
-    width: 80px !important;
-    height: 80px !important;
-    object-fit: contain !important;
-  }
-
-  &:before,
-  &:after {
-    content: '';
+  [data-wrap="tooltipHover"] {
+    pointer-events: none;
     position: absolute;
-  }
+    transform: translateY(-100%);
+    top: -12px;
+    left: -18px;
+    opacity: 0;
+    width: 250px;
+    //height: 250px;
+    z-index: 10;
 
-  &:before {
     box-sizing: border-box;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    border-image: url($articleTooltip) 10 fill / 10px;
+    padding: 8px;
+
+    [data-wrap="flexRow"] {
+      gap: 4px;
+
+      & > * {
+        flex: none;
+      }
+
+      [data-wrap="tooltipHeader"] {
+        flex: auto;
+      }
+
+      & > .lightbox-wrapper, & > .lightbox-wrapper * {
+        width: auto !important;
+      }
+    }
+
+    img {
+      width: 80px !important;
+      height: 80px !important;
+      object-fit: contain !important;
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+    }
+
+    &:before {
+      box-sizing: border-box;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      border-image: url($articleTooltip) 10 fill / 10px;
+      border-style: solid;
+      clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0 calc(100% - 6px), 0 6px);
+      background: #0B1D2D;
+    }
+
+    &:after {
+      z-index: 0;
+      left: 20px;
+      bottom: -22px;
+      width: 68px;
+      height: 30px;
+      background: url($tooltipArrow) no-repeat top/contain;
+    }
+  }
+
+  [data-wrap="tooltipHeader"] {
+    border-block: 1px solid #24435A;
+    height: 80px;
+    box-sizing: border-box;
+    padding-inline: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-image: url($articleTooltipName) 4 / 4px !important;
     border-style: solid;
-    clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0 calc(100% - 6px), 0 6px);
-    background: #0B1D2D;
+
+    p {
+      color: #FFE9AE;
+      text-align: center;
+      font-family: "Albertusnova Thin";
+      font-size: 19px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 26px; /* 136.842% */
+      letter-spacing: 0.19px;
+    }
+
+    span {
+      color: #B8A672;
+      text-align: center;
+      font-family: "Albertusnova Thin";
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 26px; /* 216.667% */
+      letter-spacing: 0.12px;
+    }
   }
 
-  &:after {
-    z-index: 0;
-    left: 20px;
-    bottom: -20px;
-    width: 68px;
-    height: 30px;
-    background: url($tooltipArrow) no-repeat top/contain;
-  }
-}
-
-[data-wrap="tooltipHeader"] {
-  border-block: 1px solid #24435A;
-  height: 80px;
-  box-sizing: border-box;
-  padding-inline: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-image: url($articleTooltipName) 4 / 4px !important;
-  border-style: solid;
-
-  &:not(.p) p {
-    color: #FFE9AE;
+  [data-wrap="tooltipContent"] {
     text-align: center;
-    font-family: "Albertusnova Thin";
-    font-size: 19px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 26px; /* 136.842% */
-    letter-spacing: 0.19px;
+    padding: 10px 0;
+
+    p {
+      color: #F9E8B9;
+      font-family: "Albertusnova Thin";
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 18px; /* 138.462% */
+      letter-spacing: 0.91px;
+      margin: 0;
+    }
   }
 
-  span {
-    color: #B8A672;
-    text-align: center;
-    font-family: "Albertusnova Thin";
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 26px; /* 216.667% */
-    letter-spacing: 0.12px;
+  [data-wrap="rarity"] {
+    display: flex;
+    padding: 4px;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(218, 183, 98, 0.00) 0%, rgba(218, 183, 98, 0.38) 15%, rgba(218, 183, 98, 0.50) 50%, rgba(218, 183, 98, 0.38) 85%, rgba(218, 183, 98, 0.00) 100%);
+
+    img, svg {
+      width: 16px !important;
+      height: 16px !important;
+      display: inline-block;
+      margin-right: 2px;
+    }
   }
-}
 
-[data-wrap="tooltipContent"] {
-  text-align: center;
-  padding: 10px 0;
-
-  &:not(.p) p {
-    color: #F9E8B9;
-    font-family: "Albertusnova Thin";
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 18px; /* 138.462% */
-    letter-spacing: 0.91px;
-    margin: 0;
+  [data-wrap="separator"] {
+    display: block;
+    width: 100%;
+    height: 10px;
+    background: url($separator) no-repeat center/contain;
   }
-}
-
-[data-wrap="rarity"] {
-  display: flex;
-  padding: 4px;
-  justify-content: space-between;
-  align-items: center;
-  background: linear-gradient(90deg, rgba(218, 183, 98, 0.00) 0%, rgba(218, 183, 98, 0.38) 15%, rgba(218, 183, 98, 0.50) 50%, rgba(218, 183, 98, 0.38) 85%, rgba(218, 183, 98, 0.00) 100%);
-
-  img, svg {
-    width: 16px !important;
-    height: 16px !important;
-    display: inline-block;
-    margin-right: 2px;
-  }
-}
-
-[data-wrap="separator"] {
-  display: block;
-  width: 100%;
-  height: 10px;
-  background: url($separator) no-repeat center/contain;
 }
