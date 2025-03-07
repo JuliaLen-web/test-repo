@@ -1,5 +1,6 @@
 .category.archetype-regular #main-outlet-wrapper .topic-owner .topic-body .contents,
-.embedded.category.archetype-regular #main-outlet-wrapper .topic-owner .topic-body .contents {
+.embedded.category.archetype-regular #main-outlet-wrapper .topic-owner .topic-body .contents,
+.embedded.category.archetype-regular #reply-control .d-editor-container .d-editor-preview {
   [data-wrap="blue"] {
     color: #1EA9FF;
   }
@@ -200,17 +201,22 @@
   }
 
   [data-wrap="rarity"] {
-    display: flex;
-    padding: 4px;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(90deg, rgba(218, 183, 98, 0.00) 0%, rgba(218, 183, 98, 0.38) 15%, rgba(218, 183, 98, 0.50) 50%, rgba(218, 183, 98, 0.38) 85%, rgba(218, 183, 98, 0.00) 100%);
+    p {
+      display: flex;
+      padding: 4px;
+      box-sizing: border-box;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0;
+      width: 100%;
+      background: linear-gradient(90deg, rgba(218, 183, 98, 0.00) 0%, rgba(218, 183, 98, 0.38) 15%, rgba(218, 183, 98, 0.50) 50%, rgba(218, 183, 98, 0.38) 85%, rgba(218, 183, 98, 0.00) 100%);
 
-    img, svg {
-      width: 16px !important;
-      height: 16px !important;
-      display: inline-block;
-      margin-right: 2px;
+      img, svg {
+        width: 16px !important;
+        height: 16px !important;
+        display: inline-block;
+        margin-right: 2px;
+      }
     }
   }
 
