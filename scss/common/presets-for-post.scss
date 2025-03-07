@@ -86,6 +86,10 @@
   height: 250px;
   z-index: 10;
 
+
+  box-sizing: border-box;
+  padding: 8px;
+
   img {
     width: 80px !important;
     height: 80px !important;
