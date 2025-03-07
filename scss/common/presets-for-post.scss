@@ -84,10 +84,7 @@
   opacity: 0;
   width: 250px;
   height: 250px;
-  border: 1px solid transparent;
-  box-sizing: border-box;
-  background: #0B1D2D;
-  clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0 calc(100% - 6px), 0 6px);
+  z-index: 10;
 
   img {
     width: 80px !important;
@@ -99,11 +96,6 @@
   &:after {
     content: '';
     position: absolute;
-    background: url($tooltipArrow) no-repeat center/contain;
-    width: 68px;
-    height: 30px;
-    bottom: -12px;
-    left: 20px;
   }
 
   &:before {
@@ -111,6 +103,19 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: #847445;
+    border: 1px solid #847445;
+    background: #0B1D2D;
+    box-sizing: border-box;
+    clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 6px, 100% calc(100% - 6px), calc(100% - 6px) 100%, 6px 100%, 0 calc(100% - 6px), 0 6px);
+    z-index: 0;
+  }
+
+  &:after {
+    background: url($tooltipArrow) no-repeat center/contain;
+    width: 68px;
+    height: 30px;
+    bottom: -24px;
+    left: 20px;
+    z-index: 1;
   }
 }
