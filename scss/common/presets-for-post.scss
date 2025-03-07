@@ -253,6 +253,8 @@
     flex-direction: column;
     align-items: center;
     gap: 25px;
+    box-sizing: border-box;
+    padding: 25px 15px;
 
     span {
       color: #F9DF94;
