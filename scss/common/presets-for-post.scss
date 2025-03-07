@@ -43,6 +43,10 @@
     max-width: 634px;
   }
 
+  article [data-wrap="tooltipWrap"] {
+    max-width: 720px;
+  }
+
   [data-wrap="tooltipItem"] {
     aspect-ratio: 1 / 1;
     width: calc(100% / 5 - 5px * 4 / 5);
