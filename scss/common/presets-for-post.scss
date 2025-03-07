@@ -105,9 +105,8 @@
   [data-wrap="flexRow"] {
     gap: 4px;
 
-
     & > * {
-      flex: auto;
+      flex: none;
     }
   }
 
