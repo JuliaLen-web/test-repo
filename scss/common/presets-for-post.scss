@@ -129,7 +129,7 @@
         flex: auto;
       }
 
-      & > .lightbox-wrapper, & > .lightbox-wrapper * {
+      .lightbox-wrapper, .lightbox-wrapper * {
         width: auto !important;
 
         img {
