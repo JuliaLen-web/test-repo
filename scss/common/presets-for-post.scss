@@ -111,8 +111,9 @@
 
       [data-wrap="tooltipHeader"] {
         p img {
-          height: 25px;
-          width: 22px;
+          aspect-ratio: 11 / 12 !important;
+          height: 11px;
+          width: 12px;
         }
       }
 
@@ -199,12 +200,6 @@
       letter-spacing: 0.19px;
       margin: 0;
       width: 100%;
-
-      img {
-        aspect-ratio: 22 / 25 !important;
-        height: 25px;
-        width: 22px;
-      }
 
       br {
         display: none;
