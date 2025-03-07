@@ -131,6 +131,13 @@
           aspect-ratio: 1 / 1 !important;
         }
       }
+
+      img {
+        width: 80px !important;
+        height: 80px !important;
+        object-fit: contain !important;
+        aspect-ratio: 1 / 1 !important;
+      }
     }
 
     &:before,
