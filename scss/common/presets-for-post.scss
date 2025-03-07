@@ -63,7 +63,7 @@
   position: relative;
 
   & > .lightbox-wrapper, & > .lightbox-wrapper * {
-    line-height: 0;
+    line-height: normal;
   }
 
   .meta {
