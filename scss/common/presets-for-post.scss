@@ -130,14 +130,19 @@
 
   &:before {
     box-sizing: border-box;
-    margin: 1px;
-    background: #0B1D2D;
+    //margin: 1px;
+    //background: #0B1D2D;
     z-index: -1;
+
+    border-image: url($articleTooltip) 10 fill / 10px;
+    border-style: solid;
   }
 
   &:after {
-    background: #847445;
+    //background: #847445;
     z-index: -2;
+
+    background: #0B1D2D;
   }
 }
 

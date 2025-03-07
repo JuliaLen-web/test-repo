@@ -41,7 +41,8 @@
     "rightButtonReply": "assets/right-button-reply.svg",
     "tooltipArrow": "assets/tooltipArrow.png",
     "tooltipHeaderLeft": "assets/tooltipHeaderLeft.svg",
-    "separator": "assets/separator.svg"
+    "separator": "assets/separator.svg",
+    "articleTooltip": "article-tooltip.webp"
   },
   "color_schemes": {
     "BS_Color": {
