@@ -29,7 +29,7 @@
       object-position: center;
 
       @media screen and (max-width: 767px) {
-        aspect-ratio: 2 / 1;
+        aspect-ratio: 2 / 1 !important;
       }
     }
   }
