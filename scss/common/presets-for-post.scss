@@ -350,4 +350,12 @@
       letter-spacing: 0.8px;
     }
   }
+
+  [data-wrap="centerText"] {
+    text-align: center;
+  }
+
+  [data-wrap="rightText"] {
+    text-align: right;
+  }
 }
