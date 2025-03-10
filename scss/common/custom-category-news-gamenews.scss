@@ -454,14 +454,17 @@
 
 .embedded.category.archetype-regular,
 .category.category-news-gamenews {
-  .d-editor-button-bar .btn.no-text.btn-icon.link,
-  .d-editor-button-bar .btn.no-text.btn-icon.blockquote,
-  .d-editor-button-bar .btn.no-text.btn-icon.code,
-  .d-editor-button-bar .btn.no-text.btn-icon.upload,
-  .d-editor-button-bar .btn.no-text.btn-icon.bullet,
-  .d-editor-button-bar .btn.no-text.btn-icon.list,
-  .d-editor-button-bar .btn.no-text.btn-icon.emoji,
-  .d-editor-button-bar .btn.no-text.btn-icon.local-dates {
-    display: none;
+
+  &:not(.staff) {
+    .d-editor-button-bar .btn.no-text.btn-icon.link,
+    .d-editor-button-bar .btn.no-text.btn-icon.blockquote,
+    .d-editor-button-bar .btn.no-text.btn-icon.code,
+    .d-editor-button-bar .btn.no-text.btn-icon.upload,
+    .d-editor-button-bar .btn.no-text.btn-icon.bullet,
+    .d-editor-button-bar .btn.no-text.btn-icon.list,
+    .d-editor-button-bar .btn.no-text.btn-icon.emoji,
+    .d-editor-button-bar .btn.no-text.btn-icon.local-dates {
+      display: none;
+    }
   }
 }
