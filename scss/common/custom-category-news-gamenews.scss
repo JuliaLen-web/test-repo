@@ -322,14 +322,6 @@
     border: none;
     box-sizing: border-box;
     background: radial-gradient(62.11% 100% at 50% 0%, #121B2E 0%, #0B1321 90.72%);
-
-    .select-kit.single-select.dropdown-select-box {
-      display: none;
-    }
-
-    .btn-mini-toggle {
-      display: none;
-    }
   }
 
   #reply-control.open {
@@ -436,6 +428,16 @@
   //,
   //&:not(.topic-status-unlisted)
   {
+    #reply-control {
+      .select-kit.single-select.dropdown-select-box {
+        display: none;
+      }
+
+      .btn-mini-toggle {
+        display: none;
+      }
+    }
+
     .d-editor-preview-wrapper {
       display: none;
     }
