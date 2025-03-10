@@ -106,6 +106,10 @@
 
     transition: opacity .3s ease-in-out;
 
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+
     [data-wrap="flexRow"] {
       gap: 4px;
 
