@@ -54,6 +54,18 @@
     [data-wrap="tooltipItem-2"] {
       width: calc(100% / 5 * 2 - 26px * 3 / 4);
     }
+
+    @media screen and (max-width: 767px) {
+      gap: 5px;
+
+      [data-wrap="tooltipItem"] {
+        width: calc(100% / 5 - 5px * 4 / 5);
+      }
+
+      [data-wrap="tooltipItem-2"] {
+        width: calc(100% / 5 * 2 - 5px * 3 / 4);
+      }
+    }
   }
 
   [data-wrap="tooltipItem"] {
