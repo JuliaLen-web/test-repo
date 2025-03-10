@@ -10,6 +10,14 @@
 }
 
 @font-face {
+  font-family: "XXII Centar Regular";
+  src: url($XXIICentarLight) format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+@font-face {
   font-family: "Albertusnova Thin";
   src: url($AlbertusnovaThin) format("opentype");
   font-weight: normal;
