@@ -322,6 +322,10 @@
     border: none;
     box-sizing: border-box;
     background: radial-gradient(62.11% 100% at 50% 0%, #121B2E 0%, #0B1321 90.72%);
+
+    .select-kit.dropdown-select-box.composer-actions {
+      display: none;
+    }
   }
 
   #reply-control.open {
@@ -429,10 +433,6 @@
   //&:not(.topic-status-unlisted)
   {
     #reply-control {
-      .select-kit.dropdown-select-box.composer-actions {
-        display: none;
-      }
-
       .btn-mini-toggle {
         display: none;
       }
