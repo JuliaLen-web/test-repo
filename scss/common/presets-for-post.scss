@@ -102,6 +102,10 @@
       line-height: normal;
     }
 
+    & > .lightbox-wrapper {
+      max-height: fit-content;
+    }
+
     .meta {
       display: none;
     }
