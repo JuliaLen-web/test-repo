@@ -217,8 +217,8 @@
     border-top: none;
   }
 
-  &.has-sidebar-page #reply-control.hide-preview,
-  #reply-control.hide-preview {
+  &.has-sidebar-page:not(.staff) #reply-control.hide-preview,
+  &:not(.staff) #reply-control.hide-preview {
     max-width: 960px;
   }
 }
