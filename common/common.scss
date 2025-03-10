@@ -24,6 +24,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Albertusnova Thin";
+  src: url($AlbertusnovaBold) format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
 //*::-webkit-scrollbar {
 //  display: none;
 //}
