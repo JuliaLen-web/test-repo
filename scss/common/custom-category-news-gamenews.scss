@@ -505,14 +505,18 @@
   letter-spacing: 1.92px;
   margin: 50px 0;
   position: relative;
+  display: flex;
+  white-space: nowrap;
+  gap: 16px;
+  align-items: center;
 
   &:after {
     content: '';
-    position: absolute;
+    position: relative;
     right: 0;
     display: block;
     width: 100%;
     background: url($separatorComment) no-repeat center/contain;
-
+    height: 17px;
   }
 }
