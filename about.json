@@ -45,7 +45,8 @@
     "separator": "assets/separator.svg",
     "separatorBig": "assets/separator-big.svg",
     "articleTooltip": "assets/article-tooltip.webp",
-    "articleTooltipName": "assets/article-tooltip-name.webp"
+    "articleTooltipName": "assets/article-tooltip-name.webp",
+    "separatorComment": "assets/separator-comment.png"
   },
   "color_schemes": {
     "BS_Color": {
