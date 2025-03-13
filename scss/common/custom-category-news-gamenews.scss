@@ -296,7 +296,11 @@
       top: 14px;
       height: 36px;
       width: 36px;
-      background: url($iconTitle) center/36px repeat
+      background: url($iconTitle) center/36px repeat;
+
+      @media screen and (max-width: 767px) {
+        top: 0;
+      }
     }
   }
 
