@@ -247,7 +247,6 @@
     max-width: 960px;
   }
 
-
   #topic-title .title-wrapper {
     flex-direction: column-reverse;
   }
@@ -263,7 +262,7 @@
     font-size: 44px;
     font-style: normal;
     font-weight: 700;
-    line-height: 112%;
+    line-height: 1.4;
     letter-spacing: 0.75px;
     text-transform: uppercase;
     position: relative;
@@ -272,6 +271,7 @@
 
     @media screen and (max-width: 767px) {
       font-size: 24px;
+      padding-left: 34px;
     }
 
     &:before {
@@ -285,6 +285,8 @@
 
       @media screen and (max-width: 767px) {
         top: 0;
+        width: 24px;
+        background-size: 24px;
       }
     }
   }
@@ -306,45 +308,13 @@
     overflow: visible;
   }
 
-  //#topic-title .title-wrapper {
-  //  flex-direction: column-reverse;
-  //}
-  //
-  //#topic-title .badge-category__wrapper .badge-category:before {
-  //  content: none;
-  //}
+  #topic-title .badge-category__wrapper .badge-category:before {
+    content: none;
+  }
 
   #topic-title .fancy-title {
     color: #F9DF94;
-    text-align: center;
     font-family: "Albertusnova Thin";
-    //font-size: 44px;
-    font-style: normal;
-    //font-weight: 700;
-    //line-height: 112%;
-    //letter-spacing: 0.75px;
-    //text-transform: uppercase;
-    position: relative;
-    //padding-left: 46px;
-    box-sizing: border-box;
-
-    @media screen and (max-width: 767px) {
-      //font-size: 24px;
-    }
-
-    //&:before {
-    //  content: '';
-    //  position: absolute;
-    //  left: 0;
-    //  top: 14px;
-    //  height: 36px;
-    //  width: 36px;
-    //  background: url($iconTitle) center/36px repeat;
-    //
-    //  @media screen and (max-width: 767px) {
-    //    top: 0;
-    //  }
-    //}
   }
 
   #topic-title .topic-category {
@@ -352,13 +322,14 @@
     position: relative;
     padding-left: 34px;
     box-sizing: border-box;
+    align-items: baseline;
 
     span {
       color: #B19F63;
       font-family: "Albertusnova Thin";
       font-size: 22px;
       font-style: normal;
-      line-height: 1.4;
+      line-height: 1.2;
       flex-direction: row-reverse;
     }
 
@@ -366,6 +337,7 @@
       content: '';
       position: absolute;
       left: 0;
+      top: 4px;
       height: 24px;
       width: 24px;
       background: url($iconCategory) center/24px repeat
