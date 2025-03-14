@@ -139,6 +139,31 @@
         h1, h2, h3, h4, h5, h6 {
           color: #B19F63;
           font-family: "Albertusnova Thin";
+          line-height: 1.4;
+        }
+
+        h1 {
+          font-size: 44px;
+        }
+
+        h2 {
+          font-size: 32px;
+        }
+
+        h3 {
+          font-size: 26px;
+        }
+
+        h4 {
+          font-size: 22px;
+        }
+
+        h5 {
+          font-size: 18px;
+        }
+
+        h6 {
+          font-size: 16px;
         }
       }
 
@@ -230,30 +255,6 @@
       font-family: "Albertusnova Thin";
     }
 
-    h1 {
-      font-size: 44px;
-    }
-
-    h2 {
-      font-size: 32px;
-    }
-
-    h3 {
-      font-size: 26px;
-    }
-
-    h4 {
-      font-size: 22px;
-    }
-
-    h5 {
-      font-size: 18px;
-    }
-
-    h6 {
-      font-size: 16px;
-    }
-
     p:empty {
       display: none;
     }
@@ -315,8 +316,7 @@
       font-family: "Albertusnova Thin";
       font-size: 22px;
       font-style: normal;
-      font-weight: 300;
-      line-height: normal;
+      line-height: 1.4;
       flex-direction: row-reverse;
     }
 
