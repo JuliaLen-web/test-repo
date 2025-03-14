@@ -271,7 +271,7 @@
 
     @media screen and (max-width: 767px) {
       font-size: 24px;
-      padding-left: 34px;
+      padding-left: 30px;
     }
 
     &:before {
@@ -337,7 +337,7 @@
       content: '';
       position: absolute;
       left: 0;
-      top: 4px;
+      top: 2px;
       height: 24px;
       width: 24px;
       background: url($iconCategory) center/24px no-repeat
@@ -351,7 +351,6 @@
       }
 
       &:before {
-        top: 0;
         height: 16px;
         width: 16px;
         background-size: 16px;
