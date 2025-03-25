@@ -9,6 +9,10 @@
     display: flex;
     gap: 20px;
 
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
+
     p {
       margin: 0 0 30px;
     }
@@ -135,7 +139,12 @@
     }
 
     [data-wrap="flexRow"] {
+      flex-direction: row;
       gap: 4px;
+
+      @media screen and (max-width: 767px) {
+        flex-direction: row;
+      }
 
       [data-wrap="tooltipHeader"] {
         p img {
