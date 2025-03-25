@@ -99,6 +99,9 @@
   ),
 .user-menu.revamped .tabs-list .btn,
 .notifications-button {
+  transition: border-color .3s;
+  border: 1px solid transparent;
+
   &.active {
     background-color: #171e2c;
     color: white !important;
