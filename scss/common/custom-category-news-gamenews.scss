@@ -87,7 +87,7 @@
       padding: 0;
     }
 
-    .topic-owner {
+    #post_1 {
       .embedded-posts.bottom {
         max-width: none;
 
@@ -199,7 +199,7 @@
       margin-left: 0;
     }
 
-    .topic-post:not(.topic-owner) {
+    .topic-post article:not(#post_1) {
       position: relative;
       border-bottom: 1px solid rgba(20, 63, 99, 0.00);
 
@@ -289,6 +289,10 @@
         background-size: 24px;
       }
     }
+  }
+
+  #banner {
+    display: none;
   }
 }
 
