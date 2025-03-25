@@ -516,6 +516,20 @@
       max-width: 820px;
     }
   }
+
+  .cooked {
+    .lightbox-wrapper {
+      a.lightbox {
+        pointer-events: none;
+        &:hover {
+          box-shadow: none;
+        }
+        .meta {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 .embedded.category.archetype-regular,
