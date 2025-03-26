@@ -294,6 +294,12 @@
   #banner {
     display: none;
   }
+
+  .small-action,
+  .topic-statuses,
+  .post-info.edits {
+    display: none;
+  }
 }
 
 .category.archetype-regular {
