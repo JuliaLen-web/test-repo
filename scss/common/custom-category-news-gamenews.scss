@@ -622,6 +622,7 @@
 .comment-section {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
   .comment-content {
     color: #F9DF94;
@@ -637,6 +638,7 @@
     white-space: nowrap;
     gap: 16px;
     align-items: center;
+    flex-grow: 1;
 
     &:after {
       content: '';
@@ -651,7 +653,7 @@
 
   .btn-comment {
     border-top: 1px solid #F9DF94;
-    border-bottom: 1px solid #F9DF94;
+    border-bottom: 1px solid #8F6616;
     background: rgba(25, 28, 33, 0.60);
     backdrop-filter: blur(1.5px);
     position: relative;
@@ -673,6 +675,7 @@
     &:after {
       content: '';
       position: absolute;
+      top: -1px;
       width: 8px;
       height: 40px;
       display: block;
