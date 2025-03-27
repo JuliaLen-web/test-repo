@@ -327,7 +327,7 @@
 
   .btn-auth {
     border-top: 1px solid #F9DF94;
-    border-bottom: 1px solid #F9DF94;
+    border-bottom: 1px solid #8F6616;
     background: linear-gradient(180deg, rgba(30, 169, 255, 0.15) 0%, rgba(2, 94, 151, 0.15) 100%);
     color: #F9DF94;
     text-align: center;
@@ -338,8 +338,9 @@
     line-height: 22px; /* 100% */
     //margin-inline: 38px;
     margin-block: 10px;
-    padding: 13px 10px;
+    padding: 10px;
     box-sizing: border-box;
+    flex-shrink: 0;
   }
 
   &:before,
@@ -349,7 +350,7 @@
      height: 44px;
      position: relative;
      content: '';
-     background: url($angleBtn) no-repeat left/38px 44px, url($lineBtn) no-repeat center/auto;
+     background: url($angleBtn) no-repeat left/39px 44px, url($lineBtn) no-repeat center/auto;
    }
 }
 
