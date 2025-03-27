@@ -319,6 +319,12 @@
 }
 
 .category.archetype-regular {
+  #post_1{
+    .post-action-menu__reply.reply {
+      display: none;
+    }
+  }
+
   .topic-body .contents {
     h1, h2, h3, h4, h5, h6 {
       color: #B19F63;
