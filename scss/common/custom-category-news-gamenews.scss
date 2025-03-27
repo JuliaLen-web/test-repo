@@ -351,11 +351,12 @@
      height: 44px;
      position: relative;
      content: '';
-     background: url($angleBtn) no-repeat right center/39px 44px, url($lineBtn) no-repeat center/auto;
+     background: url($angleBtn) no-repeat calc(100% + 1px) center/39px 44px, url($lineBtn) no-repeat center/auto;
    }
 
   &:after {
-    transform: rotate(-180deg);
+    transform: rotate(-180deg) scale(1, -1);
+    background-position: 100% center, center;
   }
 }
 
