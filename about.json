@@ -48,7 +48,8 @@
     "articleTooltipName": "assets/article-tooltip-name.webp",
     "separatorComment": "assets/separator-comment.png",
     "angleBtn": "assets/angle-btn.svg",
-    "lineBtn": "assets/line-btn.svg"
+    "lineBtn": "assets/line-btn.svg",
+    "rectLeftBtn": "assets/rect-left-btn.svg"
   },
   "color_schemes": {
     "BS_Color": {
