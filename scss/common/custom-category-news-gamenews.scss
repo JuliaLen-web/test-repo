@@ -634,11 +634,8 @@
   align-items: center;
   justify-content: space-between;
   margin-block: 50px;
-
-  @media screen and (max-width: 767px) {
-    flex-direction: column;
-    gap: 20px;
-  }
+  flex-wrap: wrap;
+  gap: 20px;
 
   .comment-content {
     color: #F9DF94;
