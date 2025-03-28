@@ -273,6 +273,8 @@
     position: relative;
     padding-left: 46px;
     box-sizing: border-box;
+    display: inline-block;
+
 
     @media screen and (max-width: 767px) {
       font-size: 34px;
@@ -280,23 +282,16 @@
       font-weight: 400;
       line-height: 42px;
       letter-spacing: 1.36px;
-      padding-left: 30px;
     }
 
     &:before {
       content: '';
       position: absolute;
       left: 0;
-      top: 14px;
+      top: calc(50% - 18px);
       height: 36px;
       width: 36px;
       background: url($iconTitle) center/36px no-repeat;
-
-      @media screen and (max-width: 767px) {
-        top: 0;
-        width: 24px;
-        background-size: 24px;
-      }
     }
 
     .posts-filtered-notice {
@@ -313,6 +308,20 @@
   .topic-statuses,
   .post-info.edits {
     display: none;
+  }
+
+  .topic-meta-data .names {
+    align-items: baseline;
+  }
+
+  .names>span a {
+    color: #FFF;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px; /* 150% */
+    letter-spacing: 0.8px;
   }
 }
 
@@ -654,8 +663,10 @@
       width: 100%;
       background: url($separatorComment) no-repeat center/contain;
       height: 24px;
+    }
 
-      @media screen and (max-width: 767px) {
+    @media screen and (max-width: 767px) {
+      &:after {
         content: none;
       }
     }
@@ -682,7 +693,7 @@
     cursor: pointer;
 
     @media screen and (max-width: 767px) {
-      max-width: 500px;
+      max-width: 400px;
       width: 100%;
       margin-inline: auto;
     }
