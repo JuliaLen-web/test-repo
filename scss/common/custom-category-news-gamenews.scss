@@ -624,6 +624,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-block: 50px;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    gap: 20px;
+  }
 
   .comment-content {
     color: #F9DF94;
@@ -633,7 +639,6 @@
     font-weight: 400;
     line-height: 30px; /* 93.75% */
     letter-spacing: 1.92px;
-    margin: 50px 0;
     position: relative;
     display: flex;
     white-space: nowrap;
@@ -649,6 +654,10 @@
       width: 100%;
       background: url($separatorComment) no-repeat center/contain;
       height: 24px;
+
+      @media screen and (max-width: 767px) {
+        content: none;
+      }
     }
   }
 
@@ -671,6 +680,12 @@
     letter-spacing: 0.8px;
     margin-inline: 8px;
     cursor: pointer;
+
+    @media screen and (max-width: 767px) {
+      max-width: 500px;
+      width: 100%;
+      margin-inline: auto;
+    }
 
     &:before,
     &:after {
