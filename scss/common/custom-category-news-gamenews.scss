@@ -6,6 +6,10 @@
     border: none;
   }
 
+  nav.post-controls .actions .double-button button.button-count:not(.my-likes) {
+    padding-right: 10px;
+  }
+
   .d-header-wrap {
     display: none;
   }
@@ -666,7 +670,7 @@
     line-height: 30px; /* 150% */
     letter-spacing: 0.8px;
     margin-inline: 8px;
-
+    cursor: pointer;
 
     &:before,
     &:after {
