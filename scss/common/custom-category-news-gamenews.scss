@@ -25,7 +25,7 @@
       content: 'Broken Sun';
       position: relative;
       color: #B19F63;
-      font-family: "Albertusnova Thin";
+      font-family: "Noto Serif", serif;
       font-size: 22px;
       font-style: normal;
       font-weight: 300;
@@ -120,16 +120,6 @@
           img, video {
             object-fit: cover;
           }
-
-          p {
-            color: #FFF;
-            font-family: "XXII Centar Regular";
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: 133.333%;
-            letter-spacing: 0.72px;
-          }
         }
       }
 
@@ -137,15 +127,12 @@
         blockquote, p, ul, h1, h2, h3, h4, h5, h6 {
           max-width: 720px;
           margin-inline: auto;
-
         }
 
         h1, h2, h3, h4, h5, h6 {
           color: #B19F63;
-          font-family: "Albertusnova Thin";
+          font-family: "Noto Serif", serif;
           line-height: 1.4;
-
-
         }
 
         h1 {
@@ -183,11 +170,12 @@
 
         .post-infos span {
           color: #E6E6E6;
-          font-family: "XXII Centar Regular";
+          font-family: "Noto Sans", sans-serif;
           font-size: 12px;
           font-style: normal;
           font-weight: 300;
-          line-height: 18px; /* 150% */
+          line-height: 14px; /* 116.667% */
+          letter-spacing: 0.24px;
         }
       }
     }
@@ -203,6 +191,16 @@
     .topic-body .topic-meta-data {
       padding-left: 0;
       margin-left: 0;
+    }
+
+    .topic-post article  p {
+      color: #FFF;
+      font-family: "Noto Sans", sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 28px; /* 155.556% */
+      letter-spacing: 0.36px;
     }
 
     .topic-post article:not(#post_1) {
@@ -262,21 +260,17 @@
   }
 
   #topic-title .fancy-title {
+    font-family: "Noto Serif", serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 50px; /* 125% */
+    letter-spacing: 1.6px;
     color: #F9DF94;
-    text-align: center;
-    font-family: "Albertusnova Thin";
-    font-size: 44px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1.4;
-    letter-spacing: 2.64px;
-    text-transform: uppercase;
     position: relative;
     padding-left: 46px;
     box-sizing: border-box;
 
     @media screen and (max-width: 767px) {
-      font-family: "Noto Serif";
       font-size: 34px;
       font-style: normal;
       font-weight: 400;
@@ -328,7 +322,7 @@
   .topic-body .contents {
     h1, h2, h3, h4, h5, h6 {
       color: #B19F63;
-      font-family: "Albertusnova Thin";
+      font-family: "Noto Serif", serif;
     }
 
     p:empty {
@@ -346,7 +340,6 @@
 
   #topic-title .fancy-title {
     color: #F9DF94;
-    font-family: "Albertusnova Thin";
   }
 
   #topic-title .topic-category {
@@ -358,7 +351,6 @@
 
     span {
       color: #B19F63;
-      font-family: "Albertusnova Thin";
       font-size: 22px;
       font-style: normal;
       line-height: 1.2;
@@ -392,7 +384,7 @@
 
   #reply-control .reply-to .composer-action-title .action-title {
     color: #FFF;
-    font-family: "XXII Centar Regular";
+    font-family: "Noto Sans", sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
@@ -400,7 +392,7 @@
   }
 
   .custom-comment-control-title {
-    font-family: "XXII Centar Regular";
+    font-family: "Noto Sans", sans-serif;
     margin-bottom: 16px;
     color: #BFC1C4;
     font-size: 20px;
@@ -510,7 +502,7 @@
       text-align: center;
 
       span {
-        font-family: "XXII Centar Regular";
+        font-family: "Noto Sans", sans-serif;
         color: #B19F63;
         font-size: 20px;
         font-style: normal;
@@ -597,7 +589,7 @@
     background: linear-gradient(180deg, rgba(30, 169, 255, 0.15) 0%, rgba(2, 94, 151, 0.15) 100%);
     color: #F9DF94;
     text-align: center;
-    font-family: "Albertusnova Thin";
+    font-family: "Noto Serif", serif;
     font-size: 22px;
     font-style: normal;
     font-weight: 400;
@@ -631,7 +623,7 @@
 
   .comment-content {
     color: #F9DF94;
-    font-family: "Albertusnova Thin";
+    font-family: "Noto Serif", serif;
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
