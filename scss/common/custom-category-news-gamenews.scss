@@ -557,7 +557,7 @@
   .cooked {
     .lightbox-wrapper {
       a.lightbox {
-        pointer-events: none;
+        //pointer-events: none;
 
         &:hover {
           box-shadow: none;
