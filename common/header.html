@@ -16,5 +16,13 @@
     popularTopicsBtn.innerHTML = newLabel;
     recentTopicsBtn.innerHTML = newLabel;
   } catch {}
+
+  if (document.getElementById("topic-title") && !document.getElementById("bs-site-news-category")) {
+    const newsCategory = document.createElement("div");
+    newsCategory.setAttribute("id", "bs-site-news-category");
+
+    const titlePost = document.getElementById("topic-title");
+    titlePost.before(newsCategory);
+  }
 </script>
 

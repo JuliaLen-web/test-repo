@@ -58,6 +58,10 @@
     display: none;
   }
 
+  #bs-site-news-category {
+    display: flex;
+  }
+
   .topic-post > article {
     border: none;
   }
@@ -327,6 +331,23 @@
     font-weight: 600;
     line-height: 30px; /* 150% */
     letter-spacing: 0.8px;
+  }
+}
+
+#bs-site-news-category {
+  display: none;
+  gap: 5px;
+  align-items: center;
+  margin-bottom: 16px;
+
+  span {
+    color: #C9CCCF;
+    font-family: "Noto Serif", serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.56px;
   }
 }
 
