@@ -292,12 +292,18 @@
       width: 100%;
       background: linear-gradient(90deg, rgba(137, 142, 162, 0) 0%, rgba(137, 142, 162, 0.6375) 15%, rgba(137, 142, 162, 0.85) 50%, rgba(137, 142, 162, 0.6375) 85%, rgba(137, 142, 162, 0) 100%);
 
-      color: #FFF;
-      font-family: "Albertusnova Thin", sans-serif;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 26px; /* 162.5% */
+      span {
+        color: #FFF;
+        font-family: "Albertusnova Thin", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1;
+
+        &:last-child {
+          text-transform: uppercase;
+        }
+      }
 
       img, svg {
         display: none;
@@ -307,10 +313,11 @@
         content: '';
         position: absolute;
         left: 0;
-        width: 16px;
-        height: 16px;
+        width: 18px;
+        height: 18px;
         display: inline-block;
         background: url($rarity) no-repeat center/contain;
+        margin-bottom: -2px;
       }
     }
 
