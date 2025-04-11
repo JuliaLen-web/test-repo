@@ -19,11 +19,12 @@
 
   console.log(document.getElementById("topic-title"), ' document.getElementById("topic-title")')
   console.log(!document.getElementById("bs-site-news-category"), ' !document.getElementById("bs-site-news-category")')
-  console.log(document.querySelector(".embedded"), ' document.querySelector(".embedded")')
 
-  if (document.getElementById("topic-title") && !document.getElementById("bs-site-news-category") && document.querySelector(".embedded")) {
+  if (document.getElementById("topic-title") && !document.getElementById("bs-site-news-category") && document.body.classList.contains('embedded')) {
     const newsCategory = document.createElement("div");
     newsCategory.setAttribute("id", "bs-site-news-category");
+
+    console.log(newsCategory, ' newCategory')
 
     const titlePost = document.getElementById("topic-title");
     titlePost.before(newsCategory);
