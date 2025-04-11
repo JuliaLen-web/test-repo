@@ -229,7 +229,7 @@
     p {
       color: #FFE9AE;
       text-align: center;
-      font-family: "Albertusnova Thin";
+      font-family: "Albertusnova Thin", sans-serif;
       font-size: 19px;
       font-style: normal;
       font-weight: 400;
@@ -245,7 +245,7 @@
       &:last-of-type {
         color: #B8A672;
         text-align: center;
-        font-family: "Albertusnova Thin";
+        font-family: "Albertusnova Thin", sans-serif;
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
@@ -265,7 +265,7 @@
 
     p {
       color: #F9E8B9;
-      font-family: "Albertusnova Thin";
+      font-family: "Albertusnova Thin", sans-serif;
       font-size: 13px;
       font-style: normal;
       font-weight: 300;
@@ -281,6 +281,7 @@
 
   [data-wrap="rarity"] {
     p {
+      position: relative;
       display: flex;
       padding: 4px;
       box-sizing: border-box;
@@ -288,22 +289,47 @@
       align-items: center;
       margin: 0;
       width: 100%;
-      background: linear-gradient(90deg, rgba(218, 183, 98, 0.00) 0%, rgba(218, 183, 98, 0.38) 15%, rgba(218, 183, 98, 0.50) 50%, rgba(218, 183, 98, 0.38) 85%, rgba(218, 183, 98, 0.00) 100%);
+      background: linear-gradient(90deg, rgba(137, 142, 162, 0) 0%, rgba(137, 142, 162, 0.6375) 15%, rgba(137, 142, 162, 0.85) 50%, rgba(137, 142, 162, 0.6375) 85%, rgba(137, 142, 162, 0) 100%);
 
       color: #FFF;
-      font-family: "Albertusnova Thin";
+      font-family: "Albertusnova Thin", sans-serif;
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
       line-height: 26px; /* 162.5% */
 
-      img, svg {
-        width: 16px !important;
-        height: 16px !important;
+      &:before {
+        content: '';
+        position: relative;
+        width: 16px;
+        height: 16px;
         display: inline-block;
-        margin-right: 2px;
-        margin-bottom: 4px;
+        background: url($rarity) no-repeat center/contain;
       }
+    }
+
+    [data-wrap="uncommon"] p {
+      background: linear-gradient(90deg, rgba(23, 67, 36, 0) 0%, rgba(23, 67, 36, 0.75) 15%, #174324 50%, rgba(23, 67, 36, 0.75) 85%, rgba(23, 67, 36, 0) 100%);
+    }
+
+    [data-wrap="rare"] p {
+      background: linear-gradient(90deg, rgba(0, 93, 124, 0) 0%, rgba(0, 93, 124, 0.6375) 15%, rgba(0, 93, 124, 0.85) 50%, rgba(0, 93, 124, 0.6375) 85%, rgba(0, 93, 124, 0) 100%);
+    }
+
+    [data-wrap="epic"] p {
+      background: linear-gradient(90deg, rgba(75, 47, 80, 0) 0%, rgba(75, 47, 80, 0.75) 15%, #4B2F50 50%, rgba(75, 47, 80, 0.75) 85%, rgba(75, 47, 80, 0) 100%);
+    }
+
+    [data-wrap="legendary"] p {
+      background: linear-gradient(90deg, rgba(84, 50, 26, 0) 0%, rgba(84, 50, 26, 0.75) 15%, #54321A 50%, rgba(84, 50, 26, 0.75) 85%, rgba(84, 50, 26, 0) 100%);
+    }
+
+    [data-wrap="divine"] p {
+      background: linear-gradient(90deg, rgba(179, 51, 76, 0) 0%, rgba(179, 51, 76, 0.6375) 15%, rgba(179, 51, 76, 0.85) 50%, rgba(179, 51, 76, 0.6375) 85%, rgba(179, 51, 76, 0) 100%);
+    }
+
+    [data-wrap="mythic"] p {
+      background: linear-gradient(90deg, rgba(172, 139, 57, 0) 0%, rgba(172, 139, 57, 0.525) 15%, rgba(172, 139, 57, 0.7) 50%, rgba(172, 139, 57, 0.525) 85%, rgba(172, 139, 57, 0) 100%);
     }
   }
 
@@ -333,7 +359,7 @@
     span {
       color: #F9DF94;
       text-align: center;
-      font-family: "Albertusnova Thin";
+      font-family: "Albertusnova Thin", sans-serif;
       font-size: 26px;
       font-style: normal;
       font-weight: 700;
@@ -351,7 +377,7 @@
     a {
       color: #1EA9FF;
       text-align: center;
-      font-family: "XXII Centar Regular";
+      font-family: "XXII Centar Regular", sans-serif;
       font-size: 20px;
       font-style: normal;
       font-weight: 500;

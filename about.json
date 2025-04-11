@@ -49,7 +49,8 @@
     "separatorComment": "assets/separator-comment.png",
     "angleBtn": "assets/angle-btn.svg",
     "lineBtn": "assets/line-btn.svg",
-    "rectLeftBtn": "assets/rect-left-btn.svg"
+    "rectLeftBtn": "assets/rect-left-btn.svg",
+    "rarity": "assets/rarity.svg"
   },
   "color_schemes": {
     "BS_Color": {
