@@ -97,7 +97,7 @@
 
     #main-outlet {
       width: 100%;
-      max-width: 960px;
+      max-width: 1000px;
       padding-top: 6px;
       padding-bottom: 8rem;
 
@@ -277,7 +277,7 @@
 
   &.has-sidebar-page:not(.staff) #reply-control.hide-preview,
   &:not(.staff) #reply-control.hide-preview {
-    max-width: 960px;
+    max-width: 1000px;
   }
 
   #topic-title .title-wrapper {
