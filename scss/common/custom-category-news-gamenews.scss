@@ -338,6 +338,15 @@
 
   #post_1 .topic-meta-data .post-infos {
     gap: 20px;
+
+    @media screen and (max-width: 425px) {
+      justify-content: space-between;
+      width: 100%;
+
+      #bs-site-news-category:before {
+        content: none;
+      }
+    }
   }
 }
 
@@ -380,14 +389,6 @@
   flex-direction: row-reverse;
   position: relative;
   margin-bottom: -2px;
-
-  @media screen and (max-width: 425px) {
-    justify-content: space-between;
-
-    &:before {
-      content: none;
-    }
-  }
 
   &:before {
     content: '';
