@@ -333,13 +333,28 @@
     line-height: 30px; /* 150% */
     letter-spacing: 0.8px;
   }
+
+  #post_1 .topic-meta-data .post-infos {
+    gap: 20px;
+  }
 }
 
 #bs-site-news-category {
   display: none;
   gap: 5px;
   align-items: center;
-  margin-bottom: 16px;
+  flex-direction: row-reverse;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #C9CCCF;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    right: -6px;
+  }
 
   span {
     color: #C9CCCF;
