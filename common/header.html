@@ -18,12 +18,22 @@
   } catch {}
 
   addEventListener("load", () => {
+    if (document.getElementById("topic-title") && document.body.classList.contains('embedded')) {
+      const newsCategory = document.createElement("a");
+      newsCategory.setAttribute("id", "bs-site-news-backlink");
+      newsCategory.setAttribute("href", "#");
+
+      const titlePost = document.getElementById("topic-title");
+      titlePost.before(newsCategory);
+    }
+
+
     if (document.querySelector("#post_1 .post-info.post-date") && !document.getElementById("bs-site-news-category") && document.body.classList.contains('embedded')) {
       const newsCategory = document.createElement("div");
       newsCategory.setAttribute("id", "bs-site-news-category");
 
-      const titlePost = document.querySelector("#post_1 .post-info.post-date");
-      titlePost.before(newsCategory);
+      const titlePostDate = document.querySelector("#post_1 .post-info.post-date");
+      titlePostDate.before(newsCategory);
     }
   });
 

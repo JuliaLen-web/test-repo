@@ -280,11 +280,8 @@
     line-height: 50px; /* 125% */
     letter-spacing: 1.6px;
     color: #F9DF94;
-    position: relative;
-    padding-left: 44px;
     box-sizing: border-box;
     display: inline-block;
-
 
     @media screen and (max-width: 767px) {
       font-size: 34px;
@@ -292,16 +289,6 @@
       font-weight: 400;
       line-height: 42px;
       letter-spacing: 1.36px;
-    }
-
-    &:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: calc(50% - 18px);
-      height: 36px;
-      width: 36px;
-      background: url($iconTitle) center/36px no-repeat;
     }
 
     .posts-filtered-notice {
@@ -339,6 +326,29 @@
   }
 }
 
+#bs-site-news-backlink {
+  position: relative;
+  margin-bottom: 16px;
+  color: #B19F63;
+
+  font-family: "Noto Sans", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.8px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: calc(50% - 10px);
+    width: 20px;
+    height: 20px;
+    background: url($iconTitle) center/20px no-repeat;
+  }
+}
+
 #bs-site-news-category {
   display: none;
   gap: 4px;
@@ -361,7 +371,7 @@
     font-family: "Noto Serif", serif;
     font-size: 14px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 18px;
     letter-spacing: 0.56px;
   }
