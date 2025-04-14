@@ -364,6 +364,13 @@
           width: 100%;
         }
       }
+
+      .contents {
+        video {
+          object-fit: contain;
+          width: 100%;
+        }
+      }
     }
   }
 
