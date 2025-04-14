@@ -18,13 +18,13 @@
   } catch {}
 
   addEventListener("load", () => {
-    if (document.getElementById("topic-title") && document.body.classList.contains('embedded')) {
-      const newsCategory = document.createElement("a");
-      newsCategory.setAttribute("id", "bs-site-news-backlink");
-      newsCategory.setAttribute("href", "#");
+    if (document.getElementById("topic-title") && !document.getElementById("bs-site-news-backlink") && document.body.classList.contains('embedded')) {
+      const backLink = document.createElement("a");
+      backLink.setAttribute("id", "bs-site-news-backlink");
+      backLink.setAttribute("href", "javascript:");
 
       const titlePost = document.getElementById("topic-title");
-      titlePost.before(newsCategory);
+      titlePost.before(backLink);
     }
 
 
