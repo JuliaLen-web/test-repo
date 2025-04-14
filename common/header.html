@@ -22,6 +22,9 @@
       const backLink = document.createElement("a");
       backLink.setAttribute("id", "bs-site-news-backlink");
       backLink.setAttribute("href", "javascript:");
+      let text = document.createTextNode("Назад");
+
+      backLink.appendChild(text);
 
       const titlePost = document.getElementById("topic-title");
       titlePost.before(backLink);
