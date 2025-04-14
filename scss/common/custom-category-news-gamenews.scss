@@ -132,7 +132,6 @@
         .contents {
           img, video {
             object-fit: cover;
-            width: 100%;
           }
         }
       }
@@ -357,6 +356,14 @@
   #post_1{
     .post-action-menu__reply.reply {
       display: none;
+    }
+
+    .topic-body {
+      .contents {
+        img, video {
+          width: 100%;
+        }
+      }
     }
   }
 
