@@ -2,6 +2,11 @@
   background: radial-gradient(50vw 45vh at 50vw 50vh, #1F314C 0%, #1A2233 95.28%), url($bgPattern) top/900px repeat;
   background-blend-mode: overlay, normal;
 
+  @media screen and (max-width: 767px) {
+    background: #1A2233, url($bgPattern) top/900px repeat;
+    background-blend-mode: overlay, normal;
+  }
+
   .topic-status-info, .topic-timer-info {
     border: none;
   }
@@ -217,7 +222,7 @@
       margin-left: 0;
     }
 
-    .topic-post article  p {
+    .topic-post article p {
       color: #FFF;
       font-family: "Noto Sans", sans-serif;
       font-size: 18px;
@@ -321,7 +326,7 @@
     align-items: baseline;
   }
 
-  .names>span a {
+  .names > span a {
     color: #FFF;
     font-family: "Noto Sans", sans-serif;
     font-size: 20px;
@@ -406,7 +411,7 @@
 }
 
 .category.archetype-regular {
-  #post_1{
+  #post_1 {
     .post-action-menu__reply.reply {
       display: none;
     }
