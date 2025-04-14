@@ -334,6 +334,7 @@
   position: relative;
   margin-bottom: 16px;
   color: #B19F63;
+  padding-left: 23px;
 
   font-family: "Noto Sans", sans-serif;
   font-size: 20px;
@@ -341,6 +342,14 @@
   font-weight: 400;
   line-height: 30px;
   letter-spacing: 0.8px;
+
+  transform: translate(calc(-100% - 96px), 55px);
+  display: block;
+  width: fit-content;
+
+  @media screen and (max-width: 1365px) {
+    transform: none;
+  }
 
   &:before {
     content: '';
