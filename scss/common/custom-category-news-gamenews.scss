@@ -16,6 +16,7 @@
 
   #topic-title {
     margin-bottom: 10px;
+    padding: 0;
   }
 
   #topic-title .topic-category {
@@ -91,10 +92,10 @@
     #main-outlet {
       width: 100%;
       max-width: 960px;
-      padding-top: 34px;
+      padding-top: 6px;
       padding-bottom: 8rem;
 
-      @media screen and (max-width: 767px) {
+      @media screen and (max-width: 1365px) {
         padding-top: 24px;
       }
     }
