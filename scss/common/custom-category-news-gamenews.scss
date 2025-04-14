@@ -76,7 +76,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url($orbitalsBg) center 50px/contain no-repeat;
+    background: url($orbitalsBg) center 40px/contain no-repeat;
     position: relative;
     z-index: 1;
 
@@ -91,8 +91,12 @@
     #main-outlet {
       width: 100%;
       max-width: 960px;
-      padding-top: 4.4rem;
+      padding-top: 34px;
       padding-bottom: 8rem;
+
+      @media screen and (max-width: 767px) {
+        padding-top: 24px;
+      }
     }
 
     .container.posts {
