@@ -3,7 +3,7 @@
   background-blend-mode: overlay, normal;
 
   @media screen and (max-width: 767px) {
-    background: #1A2233 url($bgPattern) top/900px repeat;
+    background: radial-gradient(50vw 45vh at 50vw 50vh, #1A2233 0%, #1A2233 100%), url($bgPattern) top/900px repeat;
     background-blend-mode: overlay, normal;
   }
 
