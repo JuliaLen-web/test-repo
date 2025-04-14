@@ -368,6 +368,15 @@
   align-items: center;
   flex-direction: row-reverse;
   position: relative;
+  margin-bottom: -2px;
+
+  @media screen and (max-width: 425px) {
+    justify-content: space-between;
+
+    &:before {
+      content: none;
+    }
+  }
 
   &:before {
     content: '';
