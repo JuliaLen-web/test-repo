@@ -406,4 +406,8 @@
   [data-wrap="rightText"] {
     text-align: right;
   }
+
+  a[data-clicks]::after {
+    content: none;
+  }
 }
