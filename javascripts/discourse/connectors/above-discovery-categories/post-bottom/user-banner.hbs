@@ -1,0 +1,7 @@
+{{#if post.user}}
+  <div class="custom-user-banner">
+    <!-- Здесь можете использовать user поля, например user.custom_fields.banner или avatar_template -->
+    <img src="{{post.user.avatar_template}}">
+    <span>{{post.user.username}}</span>
+  </div>
+{{/if}}
