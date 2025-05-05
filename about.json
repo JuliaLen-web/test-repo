@@ -1,6 +1,6 @@
 {
   "name": "BS_Main",
-  "component": true,
+  "component": false,
   "license_url": null,
   "about_url": null,
   "authors": null,
