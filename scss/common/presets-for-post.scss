@@ -277,7 +277,7 @@
     }
   }
 
-  [data-wrap="tooltipLeft"][data-wrap="tooltipHover"] {
+  [data-wrap="tooltipLeft"] [data-wrap="tooltipHover"] {
     left: -130px;
 
     &:after {
