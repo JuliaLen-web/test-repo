@@ -438,14 +438,26 @@
       box-sizing: border-box;
       flex-shrink: 0;
       text-align: center;
+      max-width: 100%;
+
+      @media screen and (max-width: 767px) {
+        border-right: 1px solid #8F6616;
+        border-left: 1px solid #F9DF94;
+      }
 
       a {
+        display: block;
+        min-width: 100px;
         color: #F9DF94;
         font-family: "Noto Serif", serif;
         font-size: 22px;
         font-style: normal;
         font-weight: 400;
-        line-height: 22px;
+        line-height: 1;
+
+        @media screen and (max-width: 767px) {
+          font-size: 18px;
+        }
       }
     }
 
@@ -457,6 +469,10 @@
       position: relative;
       content: '';
       background: url($angleBtn) no-repeat calc(100% + 1px) center/39px 44px, url($lineBtn) no-repeat calc(100% + -34px) center/100% auto;
+
+      @media screen and (max-width: 767px) {
+        content: none;
+      }
     }
 
     &:after {
