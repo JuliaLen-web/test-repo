@@ -412,6 +412,10 @@
 }
 
 .category.archetype-regular {
+  .container.posts>.row {
+    z-index: 101;
+  }
+
   #post_1 {
     .post-action-menu__reply.reply {
       display: none;
