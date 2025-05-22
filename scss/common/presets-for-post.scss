@@ -421,8 +421,8 @@
     content: none;
   }
 
-  [data-wrap="news-btn"] a,
-  [data-wrap="news-btn-yellow"] a {
+  [data-wrap="news-btn"] a::after,
+  [data-wrap="news-btn-yellow"] a::after {
     top: auto;
     padding: 0;
     min-width: auto;
