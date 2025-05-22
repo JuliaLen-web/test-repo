@@ -421,6 +421,15 @@
     content: none;
   }
 
+  [data-wrap="news-btn"] a,
+  [data-wrap="news-btn-yellow"] a {
+    top: auto;
+    padding: 0;
+    min-width: auto;
+    margin: 0;
+    border-radius: 0;
+  }
+
   [data-wrap="news-btn"] a {
     display: flex;
     align-items: center;
@@ -478,6 +487,7 @@
   }
 
   [data-wrap="news-btn-yellow"] a {
+    margin: 0 auto;
     background-image: url($mainBtnChecking);
     width: 210px;
     height: 42px;
@@ -493,13 +503,13 @@
     cursor: pointer;
     color: black;
     font-size: 18px !important;
-    margin-top: 3px;
 
     &:hover {
       width: 204px;
       background-image: url($mainBtnCheckingHover);
       margin-right: 3px;
       height: 40px;
+      margin-bottom: 2px;
 
       &::after {
         left: 8px;
