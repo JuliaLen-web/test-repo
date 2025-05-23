@@ -1,9 +1,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
 
 <script type="text/x-handlebars" data-template-name="/widgets/header-links">
-  {{mount-widget widget="header-links"}}
+    {{mount-widget widget="header-links"}}
 </script>
 <script type="text/javascript">
   try {
@@ -15,7 +16,8 @@
       .substring(0, popularTopicsBtn.innerHTML.length - 1);
     popularTopicsBtn.innerHTML = newLabel;
     recentTopicsBtn.innerHTML = newLabel;
-  } catch {}
+  } catch {
+  }
 
   addEventListener("load", () => {
     if (document.getElementById("topic-title") && !document.getElementById("bs-site-news-backlink") && document.body.classList.contains('embedded')) {
@@ -39,5 +41,49 @@
     }
   });
 
+</script>
+
+<script type="text/discourse-plugin" version="0.8">
+    const { iconNode } = require("discourse-common/lib/icon-library");
+    const { logout } = require("discourse/lib/logout");
+
+    api.decorateWidget("header-buttons:before", helper => {
+        if (!Discourse.User.current()) return;
+        currentUser = Discourse.User.current();
+
+
+        let container = api.container,
+        logout_text = 'Log Out', // button text!
+        logout_title = 'Log Out',
+        logout_icon = 'sign-out-alt',
+        logout_button_class = "btn btn-default btn btn-icon-text",
+        logout_button_helper = "button#logout",
+        logout_label_helper = "span.d-button-label",
+        composerModal = require("discourse/models/composer").default,
+        composerController = container.lookup("controller:composer");
+
+        const myLogout = function () {
+            if (currentUser) {
+                currentUser.destroySession();
+                window.open("https://auth.brokensun.tech/logout?redirect_uri=https://forum.brokensun.tech", "_self")
+            }
+        };
+
+
+        let currentUser = Discourse.User.current();
+        let currentUsername = Discourse.User.current().username;
+        return helper.h("span.header-links", [
+
+        helper.h(
+            logout_button_helper,
+            {
+              className: logout_button_class,
+              title: logout_title,
+              onclick: myLogout
+            },
+            [iconNode(logout_icon), helper.h(logout_label_helper, logout_text)]
+          )
+      ])
+    });
 </script>
 
