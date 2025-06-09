@@ -17,6 +17,10 @@
   content: none;
 }
 
+.badge-category__wrapper .badge-category .badge-category.--style-square {
+  display: none;
+}
+
 #header-list-area .category-boxes .category-box .category-box-inner {
   column-gap: 0;
 }
