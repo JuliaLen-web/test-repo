@@ -13,6 +13,18 @@
   border-radius: 10px;
 }
 
+.category-details .badge-category__wrapper .badge-category.--style-square::before {
+  content: none;
+}
+
+.badge-category__wrapper .badge-category .badge-category.--style-square {
+  display: none;
+}
+
+#header-list-area .category-boxes .category-box .category-box-inner {
+  column-gap: 0;
+}
+
 table {
   th {
     color: #d6d6d6;
